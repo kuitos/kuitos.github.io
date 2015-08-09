@@ -53,10 +53,9 @@ rest不是规范，只是一种设计风格(这也是经常引起争论的原因
 	
 	其他 500 502
 	
-7. 接口有两种，一种是面向服务的，一种是面向web的。面向服务的接口自然是细粒度度的，但是面向web的接口必须是聚合的。这也是前后端关于接口最容易不统一的地方。
+7. 接口有两种，一种是面向服务的，一种是面向web的。面向服务的接口自然是细粒度度的，但是面向web的接口很多时候必须是聚合的。这也是前后端关于接口最容易不统一的地方。
 
 #### 规范的restful接口对于前端的意义
-* angular(ngResource)
-	* 更好的编码体验，更优雅的代码
-	* 前端缓存 [angular-utils](https://github.com/kuitos/angular-utils)
-* react(GraphQL)
+* 更好的编码体验，更优雅的代码。 angular(ngResource)，react(GraphQL) 
+* 前端缓存 [angular-utils](https://github.com/kuitos/angular-utils)
+* 可以跟后端同学愉快的PK啦😂(当然前提是你对rest足够熟悉有足够的理论依据) 

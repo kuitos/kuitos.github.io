@@ -25,7 +25,7 @@
 2. json-mock
 	* Done：
 		* 支持多级资源嵌套（超过两级会有问题，但这也不是问题，因为资源嵌套超过两级说明你的api设计有问题）
-	* Prolems
+	* Problems
 		* 静态服务器跟代理服务依然不提供
 3. json-mock-server
 	* Done：
