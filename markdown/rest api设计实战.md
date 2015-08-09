@@ -1,7 +1,7 @@
 ## rest api设计实战
 
 #### 前言
-* 不深入细节(http://wiki.yunat.com/pages/viewpage.action?pageId=22972519)，只分享一些要点及个人对restful api设计的一些理解及心得
+* 不深入细节[数云rest接口规范](http://wiki.yunat.com/pages/viewpage.action?pageId=22972519)，只分享一些要点及个人对restful api设计的一些理解及心得
 * 对于前端工程师而言，良好的api设计至关重要
 * angular搭配restful api可以做很多有意思的事情(后面具体讲)
 
