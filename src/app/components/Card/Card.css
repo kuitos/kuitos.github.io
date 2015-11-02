@@ -1,0 +1,27 @@
+.card {
+
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 6px 12px rgba(34, 34, 34, 0.1);
+  min-height: 120px;
+  min-width: 250px;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+
+}
+
+.card a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 35em) {
+
+  .card {
+    margin: 30px;
+  }
+}
