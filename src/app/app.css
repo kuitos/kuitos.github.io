@@ -1,0 +1,19 @@
+html {
+  font-family: 微软雅黑, 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体, Lato, Calibri, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #fafafa;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.fake-link {
+  text-decoration: none;
+}

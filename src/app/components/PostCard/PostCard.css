@@ -1,0 +1,19 @@
+.post-card {
+  color: black;
+}
+
+.post-card .title {
+  padding: 20px 15px;
+  font-size: 1.25rem;
+}
+
+.post-card .info {
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.post-card .author {
+  margin-left: 5px;
+  font-size: .85rem;
+}
+
