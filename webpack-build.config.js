@@ -9,13 +9,14 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry  : [
-    './src/index'
+    './src/app/app'
   ],
   output : {
-    path    : path.join(__dirname, 'dist'),
-    filename: 'es6-utils.js'
+    path    : path.join(__dirname, 'build'),
+    filename: 'bundle.js'
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
@@ -47,7 +48,7 @@ module.exports = {
       {
         test   : /\.css$/,
         loaders: ['style', 'css'],
-        include: [path.join(__dirname, 'src'),path.join(__dirname, 'node_modules/normalize.css')]
+        include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/normalize.css')]
       }
     ]
   }

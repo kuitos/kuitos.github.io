@@ -4,12 +4,11 @@
   "description": "kuitos's blog base on react & es6",
   "main": "index.js",
   "scripts": {
-    "build:lib": "NODE_ENV=production babel src --out-dir lib --ignore **/__tests",
-    "build:dist": "webpack --config webpack-build.config.js --progress --profile --colors",
-    "dev": "NODE_EVN=dev json-mock-kuitos src/mock/db.json -s / -p 8080 & node server.js",
     "codecheck": "NODE_ENV=test eslint src/**/*.js",
     "precommit": "npm run codecheck",
     "start": "BABEL_ENV=development json-mock-kuitos src/mock/db.json -s / -p 8080 & node server.js",
+    "build": "BABEL_ENV=production webpack --config webpack-build.config.js --progress --profile --colors",
+    "dev": "npm start",
     "test": "BABEL_JEST_STAGE=0 jest --config .jestrc --verbose --watch"
   },
   "keywords": [
