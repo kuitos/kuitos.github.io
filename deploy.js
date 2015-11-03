@@ -12,11 +12,11 @@ indexHtml = indexHtml.replace(/<script.*>.*<\/script>/g, "");
 indexHtml = indexHtml.replace(/<link.*>.*<\/link>/g, "");
 indexHtml = indexHtml.replace(/<style.*>.*<\/style>/g, "");
 
-var isInlineAssets = false;
+var isInlineAssets = true;
 if (isInlineAssets) {
 
-  indexHtml = indexHtml.replace('<!-- build:css -->', fs.readFileSync(path.resolve(__dirname, '.' + assets.app.css), "utf-8"));
-  indexHtml = indexHtml.replace('<!-- build:js -->', fs.readFileSync(path.resolve(__dirname, '.' + assets.app.js), "utf-8"));
+  indexHtml = indexHtml.replace('<!-- build:css -->', '<style>' + fs.readFileSync(path.resolve(__dirname, '.' + assets.app.css), 'utf-8') + '</style>');
+  indexHtml = indexHtml.replace('<!-- build:js -->', '<script>' + fs.readFileSync(path.resolve(__dirname, '.' + assets.app.js), 'utf-8') + '</script>');
 
 } else {
 
