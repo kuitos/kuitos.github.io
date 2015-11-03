@@ -12,7 +12,10 @@ indexHtml = indexHtml.replace(/<script.*>.*<\/script>/g, "");
 indexHtml = indexHtml.replace(/<link.*>.*<\/link>/g, "");
 indexHtml = indexHtml.replace(/<style.*>.*<\/style>/g, "");
 
-var isInlineAssets = true;
+var isInlineAssets = process.argv.some(function (argv) {
+  return argv === '--inline-source';
+});
+
 if (isInlineAssets) {
 
   indexHtml = indexHtml.replace('<!-- build:css -->', '<style>' + fs.readFileSync(path.resolve(__dirname, '.' + assets.app.css), 'utf-8') + '</style>');

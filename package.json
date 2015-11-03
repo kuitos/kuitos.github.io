@@ -9,7 +9,8 @@
     "dev": "npm start",
     "start": "BABEL_ENV=development json-mock-kuitos src/mock/db.json -s / -p 8080 & node server.js",
     "build": "BABEL_ENV=production webpack --config webpack-build.config.js --progress --profile --colors",
-    "deploy": "npm run build & node deploy.js",
+    "deploy-outer": "npm run build && node deploy.js",
+    "deploy-inline": "npm run build && node deploy.js --inline-source",
     "test": "BABEL_JEST_STAGE=0 jest --config .jestrc --verbose --watch"
   },
   "keywords": [
