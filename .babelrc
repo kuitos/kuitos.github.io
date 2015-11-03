@@ -15,17 +15,19 @@
         // must be an object
         "react-transform": {
           // must be an array
-          "transforms": [{
-            // can be an NPM module name or a local path
-            "transform": "react-transform-hmr",
-            // see specific transform's docs for "imports" and "locals" it needs
-            "imports": ["react"],
-            "locals": ["module"]
-          }, {
-            // you can have many transforms, not just one
-            "transform": "react-transform-catch-errors",
-            "imports": ["react", "redbox-react"]
-          }]
+          "transforms": [
+            {
+              // can be an NPM module name or a local path
+              "transform": "react-transform-hmr",
+              // see specific transform's docs for "imports" and "locals" it needs
+              "imports": ["react"],
+              "locals": ["module"]
+            }, {
+              // you can have many transforms, not just one
+              "transform": "react-transform-catch-errors",
+              "imports": ["react", "redbox-react"]
+            }
+          ]
           // by default we only look for `React.createClass` (and ES6 classes)
           // but you can tell the plugin to look for different component factories:
           // factoryMethods: ["React.createClass", "createClass"]

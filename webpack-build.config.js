@@ -5,25 +5,33 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var AssetsPlugin = require('assets-webpack-plugin');
+var assetsPluginInstance = new AssetsPlugin({filename: '/build/assets.json', prettyPrint: true, update: true});
 
 module.exports = {
   devtool: 'source-map',
-  entry  : [
-    './src/app/app'
-  ],
+  entry  : {
+    app: './src/app/app'
+  },
   output : {
-    path    : path.join(__dirname, 'build'),
-    filename: 'bundle.js'
+    path         : path.join(__dirname, 'build'),
+    publicPath   : '/build/',
+    filename     : '[name]-[hash:8].js',
+    chunkFilename: '[id].chunk-[chunkhash:8].js'
   },
   plugins: [
+    new ExtractTextPlugin('[name]-[contenthash:8].css'),
     new webpack.optimize.UglifyJsPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.DedupePlugin(),
+    new webpack.NoErrorsPlugin(),
+    assetsPluginInstance
   ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.css']
   },
   eslint : {
-    configFIle : '.eslintrc',
+    configFile : '.eslintrc',
     emitWarning: true,
     emitError  : true,
     formatter  : require('eslint-friendly-formatter')
@@ -47,7 +55,7 @@ module.exports = {
       },
       {
         test   : /\.css$/,
-        loaders: ['style', 'css'],
+        loader : ExtractTextPlugin.extract('style', 'css'),
         include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/normalize.css')]
       }
     ]

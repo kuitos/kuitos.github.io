@@ -7,7 +7,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   entry  : [
     'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
     './src/app/app'
@@ -26,7 +26,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.css']
   },
   eslint : {
-    configFIle : '.eslintrc',
+    configFile : '.eslintrc',
     emitWarning: true,
     emitError  : true,
     formatter  : require('eslint-friendly-formatter')
