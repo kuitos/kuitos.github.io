@@ -4,6 +4,7 @@
  * @since 2015-08-14. 17:39
  */
 import polyfill from 'core-js/es6';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './containers/Index/Index.jsx';
