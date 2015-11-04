@@ -8,23 +8,44 @@ var path = require('path');
 var indexHtml = fs.readFileSync(path.resolve(__dirname, "./src/index.html"), "utf-8");
 var assets = require('./build/assets.json');
 
-indexHtml = indexHtml.replace(/<script.*>.*<\/script>/g, "");
-indexHtml = indexHtml.replace(/<link.*>.*<\/link>/g, "");
-indexHtml = indexHtml.replace(/<style.*>.*<\/style>/g, "");
+var interpolator = {
+
+  js: {
+    regex    : /<!--\s*build:js\s*-->/,
+    inlineTag: 'script',
+    outerTag : '<link rel="stylesheet" href="{{js}}">'
+  },
+
+  css: {
+    regex    : /<!--\s*build:css\s*-->/,
+    inlineTag: 'style',
+    outerTag : '<script src="{{css}}"></script>'
+  }
+
+};
 
 var isInlineAssets = process.argv.some(function (argv) {
   return argv === '--inline-source';
 });
 
+['script', 'link', 'style'].forEach(tag => {
+  indexHtml = indexHtml.replace(new RegExp(`<${tag}.*>.*</${tag}>`, 'g'), '');
+});
+
 if (isInlineAssets) {
 
-  indexHtml = indexHtml.replace('<!-- build:css -->', '<style>' + fs.readFileSync(path.resolve(__dirname, '.' + assets.app.css), 'utf-8') + '</style>');
-  indexHtml = indexHtml.replace('<!-- build:js -->', '<script>' + fs.readFileSync(path.resolve(__dirname, '.' + assets.app.js), 'utf-8') + '</script>');
+  Object.keys(interpolator).forEach(type => {
+    var info = interpolator[type];
+    indexHtml = indexHtml.replace(info.regex, `<${info.inlineTag}>` + fs.readFileSync(path.resolve(__dirname, `.${assets.app[type]}`), 'utf-8') + `</${info.inlineTag}>`);
+  });
 
 } else {
 
-  indexHtml = indexHtml.replace('<!-- build:css -->', '<link rel="stylesheet" href="' + assets.app.css + '">');
-  indexHtml = indexHtml.replace('<!-- build:js -->', '<script src="' + assets.app.js + '"></script>');
+  Object.keys(interpolator).forEach(type => {
+    var info = interpolator[type];
+    indexHtml = indexHtml.replace(info.regex, info.outerTag.replace(`{{${type}}}`, assets.app[type]));
+  });
+
 }
 
 fs.writeFile(path.resolve(__dirname, './index.html'), indexHtml, 'utf-8');
