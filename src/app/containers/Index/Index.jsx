@@ -4,27 +4,30 @@
  * @since 2015-08-14
  */
 import React from 'react';
-import IndexStore from '../../stores/IndexStore.js';
 import IndexServerActionCreators from '../../actions/IndexServerActionCreators.js';
+import IndexStore from '../../stores/IndexStore.js';
 import CardList from '../../components/CardList/CardList.jsx';
 import PostCard from '../../components/PostCard/PostCard.jsx';
+import Loader from 'react-loaders';
 
 export default class Index extends React.Component {
 
   constructor(props) {
     super(props);
-
-    IndexServerActionCreators.receivePosts();
+    this._onChange = this._onChange.bind(this);
 
     this.state = IndexStore.getAll();
+
   }
 
   componentDidMount() {
-    IndexStore.addChangeListener(this._onChange.bind(this));
+    IndexStore.addChangeListener(this._onChange);
+    // 收取blog列表
+    IndexServerActionCreators.receivePosts();
   }
 
   componentWillUnmount() {
-    IndexStore.removeChangeListener(this._onChange.bind(this))
+    IndexStore.removeChangeListener(this._onChange);
   }
 
   _onChange() {
@@ -34,25 +37,30 @@ export default class Index extends React.Component {
   render() {
 
     return (
-      <CardList>
+      <div className="vertical-center">
 
-        {
-          this.state.posts.map((post, index) => {
+        <CardList>
 
-            let cardInfo = {
-              title     : post.title,
-              url       : post.html_url,
-              createTime: post.created_at.replace(/T|Z/g, ' '),
-              author    : post.user.login
-            };
+          {
+            this.state.posts.map((post, index) => {
 
-            return <PostCard key={index} {...cardInfo} />;
-          })
-        }
+              let cardInfo = {
+                title     : post.title,
+                url       : post.html_url,
+                createTime: post.created_at.replace(/T|Z/g, ' '),
+                author    : post.user.login
+                };
 
-      </CardList>
+              return <PostCard key={index} {...cardInfo} />;
+              })
+            }
+
+        </CardList>
+
+        <Loader type="pacman" active={this.state.loading}/>
+
+      </div>
     )
-
   }
 
 }

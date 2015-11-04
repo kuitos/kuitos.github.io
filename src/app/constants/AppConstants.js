@@ -12,7 +12,8 @@ export default {
 
   ActionTypes: keyMirror({
 
-    RECEIVE_POSTS: null
+    RECEIVE_POSTS        : null,
+    CHANGE_LOADING_STATUS: null
 
   })
 

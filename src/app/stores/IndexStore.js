@@ -8,13 +8,15 @@ import AppDispatcher from '../dispatcher/AppDispatcher.js';
 import BaseStore from './BaseStore.js';
 
 let _posts = [];
+let loading = false;
 
 let IndexStore = Object.assign({
 
   getAll() {
 
     return {
-      posts: _posts
+      posts: _posts,
+      loading
     }
   }
 
@@ -27,6 +29,11 @@ AppDispatcher.register(action => {
     // nav点击
     case ActionTypes.RECEIVE_POSTS:
       _posts = action.posts;
+      IndexStore.emitChange();
+      break;
+
+    case ActionTypes.CHANGE_LOADING_STATUS:
+      loading = action.loading;
       IndexStore.emitChange();
       break;
 

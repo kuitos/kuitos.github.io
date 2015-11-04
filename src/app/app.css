@@ -10,10 +10,28 @@ body {
 
 #container {
   display: flex;
-  align-content: center;
   justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
 }
 
 .fake-link {
   text-decoration: none;
+}
+
+.vertical-center {
+  display: flex;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.loader-hidden {
+  display: none;
 }

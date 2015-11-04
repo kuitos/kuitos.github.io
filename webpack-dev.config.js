@@ -51,7 +51,11 @@ module.exports = {
       {
         test   : /\.css$/,
         loaders: ['style', 'css'],
-        include: [path.join(__dirname, 'src'),path.join(__dirname, 'node_modules/normalize.css')]
+        include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/normalize.css')]
+      },
+      {
+        test   : /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
 
     ]
