@@ -8,6 +8,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var AssetsPlugin = require('assets-webpack-plugin');
 var assetsPluginInstance = new AssetsPlugin({filename: '/build/assets.json', prettyPrint: true, update: true});
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'source-map',
@@ -36,6 +37,7 @@ module.exports = {
     emitError  : true,
     formatter  : require('eslint-friendly-formatter')
   },
+  postcss: [autoprefixer({browsers: ['last 2 versions']})],
   module : {
     preLoaders: [
       {
@@ -54,13 +56,12 @@ module.exports = {
         include: [path.join(__dirname, 'src')]
       },
       {
-        test   : /\.css$/,
-        loader : ExtractTextPlugin.extract('style', 'css'),
-        include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/normalize.css')]
+        test  : /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
       },
       {
         test   : /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract('style', 'css-loader!sass-loader!postcss-loader')
       }
     ]
   }

@@ -5,6 +5,7 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'source-map',
@@ -31,6 +32,7 @@ module.exports = {
     emitError  : true,
     formatter  : require('eslint-friendly-formatter')
   },
+  postcss: [autoprefixer({browsers: ['last 2 versions']})],
   module : {
     preLoaders: [
       {
@@ -50,12 +52,11 @@ module.exports = {
       },
       {
         test   : /\.css$/,
-        loaders: ['style', 'css'],
-        include: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules/normalize.css')]
+        loaders: ['style', 'css', 'postcss']
       },
       {
         test   : /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loaders: ['style', 'css', 'sass', 'postcss']
       }
 
     ]

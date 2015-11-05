@@ -3,7 +3,10 @@
  * @homepage https://github.com/kuitos/
  * @since 2015-08-14
  */
+import css from './Index.css';
+
 import React from 'react';
+import className from 'classnames';
 import IndexServerActionCreators from '../../actions/IndexServerActionCreators.js';
 import IndexStore from '../../stores/IndexStore.js';
 import CardList from '../../components/CardList/CardList.jsx';
@@ -36,8 +39,11 @@ export default class Index extends React.Component {
 
   render() {
 
+    let loadingBackground = '#54abee';
+    let contentBackground = '#fff';
+
     return (
-      <div className="vertical-center">
+      <div className="index-container" style={{backgroundColor:this.state.loading?loadingBackground:contentBackground}}>
 
         <CardList>
 
