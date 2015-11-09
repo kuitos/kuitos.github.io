@@ -6,25 +6,21 @@
 import css from './Index.css';
 
 import React from 'react';
-import className from 'classnames';
+
 import IndexServerActionCreators from '../../actions/IndexServerActionCreators.js';
 import IndexStore from '../../stores/IndexStore.js';
 import CardList from '../../components/CardList/CardList.jsx';
 import PostCard from '../../components/PostCard/PostCard.jsx';
-import Loader from 'react-loaders';
 
 export default class Index extends React.Component {
 
   constructor(props) {
     super(props);
-    this._onChange = this._onChange.bind(this);
-
     this.state = IndexStore.getAll();
-
   }
 
   componentDidMount() {
-    IndexStore.addChangeListener(this._onChange);
+    IndexStore.addChangeListener(this._onChange, this);
     // 收取blog列表
     IndexServerActionCreators.receivePosts();
   }
@@ -39,33 +35,24 @@ export default class Index extends React.Component {
 
   render() {
 
-    let loadingBackground = '#54abee';
-    let contentBackground = '#fff';
-
     return (
-      <div className="index-container" style={{backgroundColor:this.state.loading?loadingBackground:contentBackground}}>
+      <CardList>
 
-        <CardList>
+        {
+          this.state.posts.map((post, index) => {
 
-          {
-            this.state.posts.map((post, index) => {
+            let cardInfo = {
+              title     : post.title,
+              url       : post.html_url,
+              createTime: post.created_at.replace(/T|Z/g, ' '),
+              author    : post.user.login
+              };
 
-              let cardInfo = {
-                title     : post.title,
-                url       : post.html_url,
-                createTime: post.created_at.replace(/T|Z/g, ' '),
-                author    : post.user.login
-                };
+            return <PostCard key={index} {...cardInfo} />;
+            })
+          }
 
-              return <PostCard key={index} {...cardInfo} />;
-              })
-            }
-
-        </CardList>
-
-        <Loader type="pacman" active={this.state.loading}/>
-
-      </div>
+      </CardList>
     )
   }
 

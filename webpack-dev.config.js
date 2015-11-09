@@ -11,12 +11,12 @@ module.exports = {
   devtool: 'source-map',
   entry  : [
     'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
-    './src/app/app'
+    './src/app/App.jsx'
   ],
   output : {
-    path      : path.join(__dirname, 'build'),
-    filename  : 'bundle.js',
-    publicPath: 'http://localhost:3000/build/' // hot loader publish dir
+    path             : path.join(__dirname, 'build'),
+    filename         : 'bundle.js',
+    publicPath       : 'http://localhost:3000/build/' // hot loader publish dir
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -38,7 +38,7 @@ module.exports = {
       {
         test   : /\.jsx?$/,
         loader : 'eslint-loader',
-        exclude: /(node_modules|src\/app\/containers)/,
+        exclude: /(node_modules|src\/app\/containers)|(src\/app\/App\.jsx)/,
         include: path.join(__dirname, 'src')
       }
     ],

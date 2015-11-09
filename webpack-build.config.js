@@ -13,13 +13,13 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   devtool: 'source-map',
   entry  : {
-    app: './src/app/app'
+    app: './src/app/App.jsx'
   },
   output : {
-    path         : path.join(__dirname, 'build'),
-    publicPath   : '/build/',
-    filename     : '[name]-[hash:8].js',
-    chunkFilename: '[id].chunk-[chunkhash:8].js'
+    path             : path.join(__dirname, 'build'),
+    publicPath       : '/build/',
+    filename         : '[name]-[hash:8].js',
+    chunkFilename    : '[id].chunk-[chunkhash:8].js'
   },
   plugins: [
     new ExtractTextPlugin('[name]-[contenthash:8].css'),
@@ -43,7 +43,7 @@ module.exports = {
       {
         test   : /\.jsx?$/,
         loader : 'eslint-loader',
-        exclude: /(node_modules|src\/app\/containers)/,
+        exclude: /(node_modules|src\/app\/containers)|(src\/app\/App\.jsx)/,
         include: path.join(__dirname, 'src')
       }
     ],
@@ -60,7 +60,7 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
       },
       {
-        test   : /\.scss$/,
+        test  : /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css-loader!sass-loader!postcss-loader')
       }
     ]

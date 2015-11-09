@@ -32,11 +32,6 @@ AppDispatcher.register(action => {
       IndexStore.emitChange();
       break;
 
-    case ActionTypes.CHANGE_LOADING_STATUS:
-      loading = action.loading;
-      IndexStore.emitChange();
-      break;
-
     // no default
   }
 

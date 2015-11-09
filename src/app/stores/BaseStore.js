@@ -14,7 +14,12 @@ export default Object.assign({}, EventEmitter.prototype, {
     this.emit(CHANGE_EVENT);
   },
 
-  addChangeListener(cb){
+  addChangeListener(cb, context){
+
+    if (context) {
+      cb = cb.bind(context);
+    }
+
     this.on(CHANGE_EVENT, cb);
   },
 
