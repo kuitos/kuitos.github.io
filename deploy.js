@@ -10,41 +10,57 @@ var assets = require('./build/assets.json');
 
 var interpolator = {
 
-  js: {
-    regex    : /<!--\s*build:js\s*-->/,
-    inlineTag: 'script',
-    outerTag : '<link rel="stylesheet" href="{{js}}">'
-  },
+    js: {
+        regex    : /<!--\s*build:js\s*-->/,
+        inlineTag: 'script',
+        outerTag : '<script src="{{js}}"></script>'
+    },
 
-  css: {
-    regex    : /<!--\s*build:css\s*-->/,
-    inlineTag: 'style',
-    outerTag : '<script src="{{css}}"></script>'
-  }
+    css: {
+        regex    : /<!--\s*build:css\s*-->/,
+        inlineTag: 'style',
+        outerTag : '<link rel="stylesheet" href="{{css}}">'
+    }
 
 };
 
 var isInlineAssets = process.argv.some(function (argv) {
-  return argv === '--inline-source';
+    return argv === '--inline-source';
 });
 
 ['script', 'link', 'style'].forEach(tag => {
-  indexHtml = indexHtml.replace(new RegExp(`<${tag}.*>.*</${tag}>`, 'g'), '');
+    indexHtml = indexHtml.replace(new RegExp(`<${tag}.*>.*</${tag}>`, 'g'), '');
 });
 
 if (isInlineAssets) {
 
-  Object.keys(interpolator).forEach(type => {
-    var info = interpolator[type];
-    indexHtml = indexHtml.replace(info.regex, `<${info.inlineTag}>` + fs.readFileSync(path.resolve(__dirname, `.${assets.app[type]}`), 'utf-8') + `</${info.inlineTag}>`);
-  });
+    Object.keys(interpolator).forEach(type => {
+
+        var sourcePath = assets.app[type],
+            info;
+
+        if (sourcePath) {
+
+            info = interpolator[type];
+            indexHtml = indexHtml.replace(info.regex, `<${info.inlineTag}>` + fs.readFileSync(path.resolve(__dirname,
+                    `.${assets.app[type]}`), 'utf-8') + `</${info.inlineTag}>`);
+        }
+
+    });
 
 } else {
 
-  Object.keys(interpolator).forEach(type => {
-    var info = interpolator[type];
-    indexHtml = indexHtml.replace(info.regex, info.outerTag.replace(`{{${type}}}`, assets.app[type]));
-  });
+    Object.keys(interpolator).forEach(type => {
+
+        var sourcePath = assets.app[type],
+            info;
+
+        if (sourcePath) {
+            info = interpolator[type];
+            indexHtml = indexHtml.replace(info.regex, info.outerTag.replace(`{{${type}}}`, assets.app[type]));
+        }
+
+    });
 
 }
 

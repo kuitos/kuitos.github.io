@@ -18,8 +18,7 @@ module.exports = {
   output : {
     path             : path.join(__dirname, 'build'),
     publicPath       : '/build/',
-    filename         : '[name]-[hash:8].js',
-    chunkFilename    : '[id].chunk-[chunkhash:8].js'
+    filename         : '[name]-[hash:8].js'
   },
   plugins: [
     new ExtractTextPlugin('[name]-[contenthash:8].css'),
