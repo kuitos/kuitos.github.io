@@ -56,11 +56,11 @@ module.exports = {
       },
       {
         test  : /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
+        loader: ExtractTextPlugin.extract('style', 'css!postcss')
       },
       {
         test  : /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css-loader!sass-loader!postcss-loader')
+        loader: ExtractTextPlugin.extract('style', 'css!sass!postcss')
       }
     ]
   }
