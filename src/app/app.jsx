@@ -14,6 +14,7 @@ import loaders from 'loaders.css/src/animations/pacman.scss';
 import loadingInterceptor, {eventEmitter} from 'es6-utils/lib/utils/interceptors/loading-interceptor.js';
 import {FetchHttp} from 'es6-utils';
 import LoadingActionCreators from './actions/LoadingActionCreators.js';
+import {Container} from 'flux/utils';
 
 import className from 'classnames';
 import Loader from 'react-loaders';
@@ -25,11 +26,14 @@ function emitChangeLoading(loading) {
   LoadingActionCreators.changeLoadingStatus(loading);
 }
 
-export default class App extends React.Component {
+class App extends React.Component {
 
-  constructor() {
-    super();
-    this.state = AppStore.getAppStatus();
+  static getStores() {
+    return [AppStore];
+  }
+
+  static calculateState(prevState) {
+    return AppStore.getState().toObject();
   }
 
   componentWillMount() {
@@ -37,17 +41,8 @@ export default class App extends React.Component {
     eventEmitter.addListener('loadingStatusChanged', emitChangeLoading);
   }
 
-  componentDidMount() {
-    AppStore.addChangeListener(this._onChange, this);
-  }
-
   componentWillUnmount() {
     eventEmitter.removeListener('loadingStatusChanged', emitChangeLoading);
-    AppStore.removeChangeListener(this._onChange);
-  }
-
-  _onChange() {
-    this.setState(AppStore.getAppStatus());
   }
 
   render() {
@@ -69,7 +64,9 @@ export default class App extends React.Component {
 
 }
 
+const AppContainer = Container.create(App, {});
+
 ReactDOM.render(
-  <App/>,
+  <AppContainer/>,
   document.getElementById('container')
 );

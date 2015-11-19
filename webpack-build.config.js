@@ -7,6 +7,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var AssetsPlugin = require('assets-webpack-plugin');
+var CleanPlugin = require('clean-webpack-plugin');
 var assetsPluginInstance = new AssetsPlugin({filename: '/build/assets.json', prettyPrint: true, update: true});
 var autoprefixer = require('autoprefixer');
 
@@ -21,6 +22,7 @@ module.exports = {
     filename         : '[name]-[hash:8].js'
   },
   plugins: [
+    new CleanPlugin('build'),
     new ExtractTextPlugin('[name]-[contenthash:8].css'),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.DedupePlugin(),
