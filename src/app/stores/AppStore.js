@@ -5,33 +5,33 @@
  */
 import React from 'react';
 
-import BaseStore from './BaseStore.js';
 import {ActionTypes} from '../constants/AppConstants.js';
 import AppDispatcher from '../dispatcher/AppDispatcher.js';
+import {MapStore} from 'flux/utils';
+import Immutable from 'immutable';
 
-let loading = false;
+class AppStore extends MapStore {
 
-let AppStore = Object.assign({
-
-  getAppStatus(){
-    return {loading};
+  getInitialState() {
+    return Immutable.Map({
+      loading: false
+    });
   }
 
-}, BaseStore);
+  reduce(state, action) {
 
-AppDispatcher.register(action => {
+    switch (action.type) {
 
-  switch (action.type) {
+      case ActionTypes.CHANGE_LOADING_STATUS:
+        return state.set('loading', action.loading);
 
-    case ActionTypes.CHANGE_LOADING_STATUS:
-      loading = action.loading;
-      AppStore.emitChange();
-      break;
+      default:
+        return state;
 
-    // no default
+    }
 
   }
 
-});
+}
 
-export default AppStore;
+export default new AppStore(AppDispatcher);

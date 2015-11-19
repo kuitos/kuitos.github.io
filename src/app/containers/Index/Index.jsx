@@ -11,26 +11,21 @@ import IndexServerActionCreators from '../../actions/IndexServerActionCreators.j
 import IndexStore from '../../stores/IndexStore.js';
 import CardList from '../../components/CardList/CardList.jsx';
 import PostCard from '../../components/PostCard/PostCard.jsx';
+import {Container} from 'flux/utils';
 
-export default class Index extends React.Component {
+class Index extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = IndexStore.getAll();
+  static getStores() {
+    return [IndexStore];
+  }
+
+  static calculateState() {
+    return IndexStore.getState().toObject();
   }
 
   componentDidMount() {
-    IndexStore.addChangeListener(this._onChange, this);
     // 收取blog列表
     IndexServerActionCreators.receivePosts();
-  }
-
-  componentWillUnmount() {
-    IndexStore.removeChangeListener(this._onChange);
-  }
-
-  _onChange() {
-    this.setState(IndexStore.getAll());
   }
 
   render() {
@@ -57,3 +52,5 @@ export default class Index extends React.Component {
   }
 
 }
+
+export default Container.create(Index);

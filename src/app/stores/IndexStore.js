@@ -5,36 +5,31 @@
  */
 import { ActionTypes } from '../constants/AppConstants.js';
 import AppDispatcher from '../dispatcher/AppDispatcher.js';
-import BaseStore from './BaseStore.js';
+import {MapStore} from 'flux/utils';
+import Immutable from 'immutable';
 
-let _posts = [];
-let loading = false;
+class IndexStore extends MapStore {
 
-let IndexStore = Object.assign({
+  getInitialState() {
+    return Immutable.Map({
+      posts: []
+    });
+  }
 
-  getAll() {
+  reduce(state, action) {
 
-    return {
-      posts: _posts,
-      loading
+    switch (action.type) {
+
+      // nav点击
+      case ActionTypes.RECEIVE_POSTS:
+        return state.set('posts', action.posts);
+
+      default:
+        return state;
     }
+
   }
 
-}, BaseStore);
+}
 
-AppDispatcher.register(action => {
-
-  switch (action.type) {
-
-    // nav点击
-    case ActionTypes.RECEIVE_POSTS:
-      _posts = action.posts;
-      IndexStore.emitChange();
-      break;
-
-    // no default
-  }
-
-});
-
-export default IndexStore;
+export default new IndexStore(AppDispatcher);

@@ -55,6 +55,7 @@
     "classnames": "^2.2.0",
     "es6-utils": "^1.2.12",
     "flux": "^2.1.1",
+    "immutable": "^3.7.5",
     "keymirror": "^0.1.1",
     "loaders.css": "^0.1.1",
     "normalize.css": "^3.0.3",
