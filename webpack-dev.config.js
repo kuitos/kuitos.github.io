@@ -10,13 +10,13 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   devtool: 'source-map',
   entry  : [
-    'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&reload=true',
     './src/app/App.jsx'
   ],
   output : {
-    path             : path.join(__dirname, 'build'),
-    filename         : 'bundle.js',
-    publicPath       : 'http://localhost:3000/build/' // hot loader publish dir
+    path      : path.join(__dirname, 'build'),
+    filename  : 'bundle.js',
+    publicPath: '/' // hot loader publish dir
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),

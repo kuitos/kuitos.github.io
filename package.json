@@ -7,7 +7,7 @@
     "codecheck": "BABEL_ENV=development eslint src/**",
     "precommit": "npm run codecheck",
     "dev": "npm start",
-    "start": "BABEL_ENV=development json-mock-kuitos src/mock/db.json -s / -p 8080 & node server.js",
+    "start": "BABEL_ENV=development node server.js",
     "build": "BABEL_ENV=production webpack --config webpack-build.config.js --progress --profile --colors",
     "deploy-outer": "npm run build && node deploy.js",
     "deploy-inline": "npm run build && node deploy.js --inline-source",
