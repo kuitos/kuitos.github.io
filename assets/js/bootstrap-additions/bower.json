@@ -1,0 +1,35 @@
+{
+  "name": "bootstrap-additions",
+  "description": "BootstrapAdditions - CSS extension kit for Twitter Bootstrap 3.0+",
+  "version": "0.2.2",
+  "keywords": [
+    "angular",
+    "animation"
+  ],
+  "homepage": "https://github.com/mgcrea/bootstrap-additions",
+  "bugs": "https://github.com/mgcrea/bootstrap-additions/issues",
+  "author": {
+    "name": "Olivier Louvignes",
+    "email": "olivier@mg-crea.com",
+    "url": "https://github.com/mgcrea"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgcrea/bootstrap-additions.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "main": [
+    "dist/bootstrap-additions.min.css"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": ">=3.0.0",
+    "angular-motion": "~0.3.2",
+    "angular-strap": "~2.0.0",
+    "highlightjs": "~8.0.0"
+  }
+}

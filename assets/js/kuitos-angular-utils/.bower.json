@@ -1,0 +1,24 @@
+{
+  "name": "kuitos-angular-utils",
+  "version": "1.2.6",
+  "author": "Kuitos Lau",
+  "description": "a useful & powerful angular utils collections, without dependencies",
+  "keywords": [
+    "angular utils"
+  ],
+  "main": "./services/http-handler.js",
+  "dependencies": {
+    "angular": ">=1.x.x",
+    "angular-resource": ">=1.x.x"
+  },
+  "homepage": "https://github.com/kuitos/angular-utils",
+  "_release": "1.2.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.6",
+    "commit": "c01c9e201465f72743225652f83761cefe05dc1a"
+  },
+  "_source": "git://github.com/kuitos/angular-utils.git",
+  "_target": "^1.2.5",
+  "_originalSource": "kuitos-angular-utils"
+}

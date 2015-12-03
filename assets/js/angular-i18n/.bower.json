@@ -1,0 +1,20 @@
+{
+  "name": "angular-i18n",
+  "version": "1.3.20",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "precommit.sh"
+  ],
+  "homepage": "https://github.com/angular/bower-angular-i18n",
+  "_release": "1.3.20",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.20",
+    "commit": "35cfdabef9c1ac912cbb2222886debe203f17bb7"
+  },
+  "_source": "git://github.com/angular/bower-angular-i18n.git",
+  "_target": "~1.3.5",
+  "_originalSource": "angular-i18n"
+}

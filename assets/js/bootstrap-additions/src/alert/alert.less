@@ -1,0 +1,53 @@
+/*
+ * Alerts placement
+ */
+
+.alert {
+
+  &.top, &.top-left, &.top-right, &.bottom, &.bottom-left, &.bottom-right {
+    position: fixed;
+    z-index: @zindex-modal;
+    margin: 20px;
+  }
+
+  &.top, &.top-left, &.top-right {
+    top: @navbar-height;
+  }
+  &.top {
+    right: 0px;
+    left: 0px;
+  }
+  &.top-right {
+    right: 0px;
+    .close {
+      padding-left: 10px;
+    }
+  }
+  &.top-left {
+    left: 0px;
+    .close {
+      padding-right: 10px;
+    }
+  }
+
+  &.bottom, &.bottom-right, &.bottom-left {
+    bottom: 0px;
+  }
+  &.bottom {
+    right: 0px;
+    left: 0px;
+  }
+  &.bottom-right {
+    right: 0px;
+    .close {
+      padding-left: 10px;
+    }
+  }
+  &.bottom-left {
+    left: 0px;
+    .close {
+      padding-right: 10px;
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  "name": "kuitos-angular-utils",
+  "version": "1.0.0",
+  "author": "Kuitos Lau",
+  "description": "a useful & powerful angular utils collections, without dependencies",
+  "keywords": [
+    "angular utils"
+  ],
+  "main": "./services/http-handler.js",
+  "dependencies": {
+    "angular": ">=1.x.x",
+    "angular-resource": ">=1.x.x"
+  },
+  "homepage": "https://github.com/kuitos/angular-utils"
+}

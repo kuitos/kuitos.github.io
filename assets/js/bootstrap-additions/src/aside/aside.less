@@ -1,0 +1,57 @@
+/*
+ * Aside element
+ */
+
+.aside {
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: @zindex-modal - 1;
+  overflow: auto;
+  min-width: 320px;
+  background: white;
+
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: @screen-sm-max) {
+    min-width: 240px;
+  }
+
+  &.left {
+    right: auto;
+    left: 0;
+  }
+  &.right {
+    right: 0;
+    left: auto;
+  }
+
+  .aside-dialog {
+    .aside-header {
+      .modal-header;
+      padding: 6px 15px;
+      background: @brand-primary;
+      color: white;
+      .close {
+        margin-right: -8px;
+        padding: 4px 8px;
+        color: white;
+        font-size: 25px;
+        opacity: .8;
+      }
+    }
+    .aside-body {
+      .modal-body;
+    }
+    .aside-footer {
+      .modal-footer;
+    }
+  }
+
+}
+
+.aside-backdrop {
+  .modal-backdrop;
+}

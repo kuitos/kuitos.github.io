@@ -1,0 +1,67 @@
+<!-- Created by Kuitos on 15/8/19. -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body ng-app="app">
+
+<a ui-sref="home">home</a>
+
+<a ui-sref="wtf">wtf</a>
+
+
+<div ui-view></div>
+
+<script type="text/ng-template" id="home.html">
+
+  hello world
+
+</script>
+
+<script type="text/ng-template" id="wtf.html">
+
+  wtf
+
+</script>
+
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../services/base-services.js"></script>
+
+<script>
+
+  angular
+      .module('app', ['ng', 'ngUtils.services.baseServices', 'ui.router'])
+      .config(function ($stateProvider) {
+        $stateProvider
+            .state('home', {
+              url        : 'home',
+              templateUrl: 'home.html',
+              controller : function ($scope, Mediator) {
+                Mediator.publish('home', 222134);
+                Mediator.subscribe('home', function () {
+                  console.log('home');
+                }, $scope);
+              }
+            })
+
+            .state('wtf', {
+              url        : 'wtf',
+              templateUrl: 'wtf.html',
+              controller : function ($scope, Mediator) {
+                Mediator.publish('wtf', 134);
+
+                Mediator.subscribe('wtf', function (data) {
+                  console.log(data);
+                }, $scope);
+              }
+            })
+      })
+
+
+</script>
+</body>
+</html>

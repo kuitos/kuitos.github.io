@@ -1,0 +1,56 @@
+{
+  "name": "kuitos-angular-utils",
+  "version": "1.2.8",
+  "description": "a useful & powerful angular utils collections, without dependencies",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuitos/angular-utils.git"
+  },
+  "keywords": [
+    "angular",
+    "utils",
+    "useful"
+  ],
+  "author": {
+    "name": "Kuitos"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuitos/angular-utils/issues"
+  },
+  "homepage": "https://github.com/kuitos/angular-utils",
+  "dependencies": {
+    "angular": ">=1.x.x",
+    "angular-resource": ">=1.x.x"
+  },
+  "gitHead": "dd208508407662d38b84bbcccf345984203db97a",
+  "_id": "kuitos-angular-utils@1.2.8",
+  "_shasum": "ada76ed71b392922ec3ac88397b607257a2a51d9",
+  "_from": "kuitos-angular-utils@1.2.8",
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "name": "kuitos",
+    "email": "kuitos.lau@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "kuitos",
+      "email": "kuitos.lau@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "ada76ed71b392922ec3ac88397b607257a2a51d9",
+    "size": 26070,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/kuitos-angular-utils/download/kuitos-angular-utils-1.2.8.tgz"
+  },
+  "directories": {},
+  "publish_time": 1448003503907,
+  "_cnpm_publish_time": 1448003503907,
+  "_resolved": "https://registry.npm.taobao.org/kuitos-angular-utils/download/kuitos-angular-utils-1.2.8.tgz"
+}
