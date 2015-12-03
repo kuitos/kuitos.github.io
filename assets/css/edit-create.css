@@ -1,0 +1,257 @@
+/**
+ * Created by Ash on 15/8/19.
+ * 设置框
+ */
+
+/**
+ * 表单修正
+ */
+
+.gme-settings {
+    margin-left: 377px;
+}
+
+.gme-settings .setting-box {
+    border-radius: 4px;
+    margin-top: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.gme-settings .setting-box:before,
+.gme-settings .setting-box:after {
+    border: 11px solid transparent;
+    border-bottom-width: 7px;
+    border-top-width: 7px;
+    border-right-color: #efefef;
+    content: ' ';
+    position: absolute;
+    left: -22px;
+    top: 155px;
+}
+
+.gme-settings .setting-box:after {
+    border-right-color: #f9f9f9;
+    left: -21px;
+    top: 156px;
+}
+
+.gme-form td {
+    line-height: 25px !important;
+    padding-left: 15px;
+    padding-bottom: 10px !important;
+    padding-top: 0 !important;
+    vertical-align: top;
+}
+
+.gme-form label {
+    margin-bottom: 0;
+    vertical-align: top;
+}
+
+.gme-form textarea {
+    height: 90px;
+}
+
+.gme-form [type=checkbox],
+.gme-form [type=radio] {
+    margin: 0;
+    vertical-align: -0.15em;
+}
+
+.gme-form [disabled] {
+    background: #eee;
+}
+
+.gme-form .borderHighlight {
+    line-height: 21px;
+    vertical-align: top;
+}
+
+.gme-form .form-info {
+    color: #676767;
+}
+
+/* 弹框 */
+
+.gme-dialog-form {
+    padding-top: 40px;
+}
+
+.gme-dialog-form td:first-child {
+    text-align: right;
+    width: 132px;
+}
+
+/**
+ * 底部保存
+ */
+
+.gme-save {
+    background: rgba(58, 58, 58, 0.7);
+    height: 44px;
+    padding: 7px 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+
+/**
+ * 手机展示
+ */
+
+.gme-page {
+    padding-bottom: 10px !important;
+}
+
+/* 手机头部 */
+
+.gme-phone-topbar {
+    display: block;
+    height: 20px;
+    background: url("../images/gme-phone-header.png") no-repeat;
+    background-size: 318px 20px;
+}
+
+.gme-phone-header {
+    background: #f8f8f8;
+    color: #3d4245;
+    font-size: 14px;
+    height: 3rem;
+    line-height: 3rem;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+    padding: 0 0.625rem;
+    text-align: center;
+}
+
+.gme-phone-back {
+    padding-left: 1.25rem;
+    position: absolute;
+    left: 0.625rem;
+}
+
+.gme-phone-back:before,
+.gme-phone-back:after {
+    background: #3d4245;
+    content: ' ';
+    height: 2px;
+    width: 0.8rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-45deg);
+}
+
+.gme-phone-back:after {
+    margin-top: -1px;
+    transform: rotate(45deg);
+}
+
+/* 样式覆盖 */
+
+.gme-page h1 {
+    font-size: 16px;
+}
+
+.gme-page i {
+    font-style: normal;
+}
+
+.gme-page em {
+    color: #fb9a4c;
+}
+
+.gme-page .gift-detail-info-title {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.gme-page .sub-page-header {
+    margin-left: -0.625rem !important;
+    margin-right: -0.625rem !important;
+    position: relative !important;
+}
+
+.gme-page .gift-detail-thumb {
+    padding-top: 0;
+}
+
+.gme-page .icon-fanhui {
+    border: 2px solid #f54365;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 14px;
+    height: 25px;
+    line-height: 23px;
+    margin-top: 5px;
+    text-align: center;
+    width: 25px;
+}
+
+.gift-detail-info {
+    font-size: 12px;
+}
+
+.gift-detail-info textarea {
+    width: 100%;
+    min-height: 250px;
+}
+
+.gift-detail-points {
+    font-size: 16px;
+}
+
+.gme-icon-points {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: -0.1em;
+    background: url("../images/icon-points.png");
+    background-size: 16px 16px;
+}
+
+.gift-price {
+    color: #676767;
+    text-decoration: line-through;
+}
+
+.slider-images > li {
+    text-align: center;
+}
+
+.gift-detail-name {
+    font-size: 16px;
+}
+
+.self-modal-footer {
+    margin-top: 86px;
+    overflow: hidden;
+}
+
+.self-modal-footer-40 {
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.self-modal-footer button,
+.self-modal-footer-40 button{
+    float: right;
+}
+
+.hint-text {
+    font-size: 12px;
+    color: darkgray;
+}
+
+.hint-text-bottom{
+    position: absolute;
+    top:85px;
+    left: 14px;
+}

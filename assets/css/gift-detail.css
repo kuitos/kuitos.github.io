@@ -1,0 +1,710 @@
+/**
+ * 积分商城
+ * @author Ash.Zhang
+ * @create 2015/08/12
+ */
+/**
+ * 全局样式
+ * @author Ash.Zhang
+ * @create 2015/08/12
+ */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after,
+.row:after {
+    clear: both;
+}
+
+.gap,
+.gap-sm {
+    margin-bottom: 0;
+    margin-top: 0.625rem;
+}
+
+.gap:first-child,
+.gap-sm:first-child {
+    margin-top: 0;
+}
+
+.gap-sm {
+    margin-top: 0.3125rem;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.bg-gray {
+    background: #f8f8f8 !important;
+}
+
+/**
+ * 配置文件
+ * @author Ash.Zhang
+ * @create 2015/08/12
+ */
+/**
+ * 栅格系统
+ * @author Ash.Zhang
+ * @create 2015/08/12
+ */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #ffffff;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+[class^=col-] {
+    float: left;
+    min-height: 1px;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+}
+
+[class^=col-]:first-child {
+    padding-left: 0.625rem;
+}
+
+[class^=col-]:last-child {
+    padding-right: 0.625rem;
+}
+
+.col-1-6 {
+    width: 16.66666667%;
+}
+
+.col-1-3,
+.col-2-6 {
+    width: 33.33333333%;
+}
+
+.col-1-2,
+.col-2-4,
+.col-3-6 {
+    width: 50%;
+}
+
+.col-2-3,
+.col-4-6 {
+    width: 66.66666667%;
+}
+
+.col-5-6 {
+    width: 83.33333333%;
+}
+
+.col-2-2,
+.col-3-3,
+.col-4-4,
+.col-5-5,
+.col-6-6 {
+    width: 100%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-2-5 {
+    width: 40%;
+}
+
+.col-3-5 {
+    width: 60%;
+}
+
+.col-4-5 {
+    width: 80%;
+}
+
+/**
+ * 标题栏
+ * @author Ash.Zhang
+ * @create 2015/08/12
+ */
+.sub-page-header {
+    background: #ededed;
+    border-bottom: 2px solid #e5e5e5;
+    height: 3rem;
+    position: relative;
+    padding: 0 0.625rem;
+}
+
+.sub-page-title {
+    line-height: 3rem;
+    text-align: center;
+}
+
+.sub-page-back {
+    color: #f54365;
+    font-size: 2rem;
+    line-height: 3rem;
+    position: absolute;
+    left: 0.625rem;
+    top: 0;
+}
+
+.sub-page-back > .iconfont {
+    vertical-align: 2px;
+}
+
+.drop-down {
+    float: right;
+}
+
+.drop-down.opened > .drop-down-toggle {
+    color: #f54365;
+}
+
+.drop-down.opened .drop-down-triangle {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform ease-in-out 0.2s;
+    -moz-transition: -moz-transform ease-in-out 0.2s;
+    -o-transition: -o-transform ease-in-out 0.2s;
+    transition: -webkit-transform ease-in-out 0.2s, -moz-transform ease-in-out 0.2s, -o-transform ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+
+.drop-down.opened > .drop-down-list {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition: -webkit-transform ease-in-out 0.2s;
+    -moz-transition: -moz-transform ease-in-out 0.2s;
+    -o-transition: -o-transform ease-in-out 0.2s;
+    transition: -webkit-transform ease-in-out 0.2s, -moz-transform ease-in-out 0.2s, -o-transform ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+
+.drop-down-toggle {
+    line-height: 3rem;
+}
+
+.drop-down-triangle {
+    display: inline-block;
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+}
+
+.drop-down-list {
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+.drop-down-item {
+    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #ffffff;
+    line-height: 3rem;
+    padding: 0 1.25rem;
+    position: relative;
+}
+
+.drop-down-item:first-child {
+    border-top: 0;
+}
+
+.drop-down-item.active:after {
+    background: #f54365;
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 0.3125rem;
+}
+
+/**
+ * 图片轮播
+ * @author Ash.Zhang
+ * @create 2015/08/14
+ */
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-images {
+    padding-top: 75%;
+}
+
+.slider-images > li:before {
+    content: ' ';
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: -.5em;
+}
+
+.slider-images > li {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.slider-images > li > img {
+    width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.slider-images > li.active {
+    z-index: 1;
+}
+
+.slider-fly-out {
+    -webkit-animation: fly-out 0.5s ease-in-out;
+    -moz-animation: fly-out 0.5s ease-in-out;
+    -o-animation: fly-out 0.5s ease-in-out;
+    animation: fly-out 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.slider-fly-in {
+    -webkit-animation: fly-in 0.5s ease-in-out;
+    -moz-animation: fly-in 0.5s ease-in-out;
+    -o-animation: fly-in 0.5s ease-in-out;
+    animation: fly-in 0.5s ease-in-out;
+    z-index: 3;
+}
+
+@-webkit-keyframes fly-out {
+    from {
+        -webkit-transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes fly-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes fly-in {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fly-in {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+.slider-dots {
+    font-size: 0;
+    position: absolute;
+    bottom: 0.3125rem;
+    left: 0;
+    z-index: 4;
+    text-align: center;
+    width: 100%;
+}
+
+.slider-dots > li {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.625rem;
+    margin: 0 0.15625rem;
+    width: 0.625rem;
+}
+
+.slider-dots > li:first-child {
+    background: #f54365;
+}
+
+/**
+ * 页面布局
+ * @author Ash.Zhang
+ * @create 2015/08/13
+ */
+.swiping {
+    overflow: hidden;
+}
+
+.page {
+    background: #ffffff;
+    display: none;
+    overflow-x: hidden;
+    padding: 0 0.625rem;
+    position: relative;
+    width: 100%;
+}
+
+.page.active {
+    display: block;
+}
+
+.page.loading > * {
+    visibility: hidden;
+}
+
+.page.loading:before {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    color: #4c4c4c;
+    content: '\e629';
+    display: block;
+    font-family: iconfont;
+    font-size: 1.3333333rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 2rem;
+}
+
+.remove-page-gap,
+.gift-detail-thumb,
+.gift-detail-title {
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+}
+
+.sub-page.active {
+    padding-top: 3rem;
+}
+
+.sub-page > .sub-page-header {
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+}
+
+.active.sub-page > .sub-page-header {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+
+.page-out {
+    -webkit-animation: fade-out 0.5s ease-in-out;
+    -moz-animation: fade-out 0.5s ease-in-out;
+    -o-animation: fade-out 0.5s ease-in-out;
+    animation: fade-out 0.5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.page-out:before {
+    background: rgba(0, 0, 0, 0.7);
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.page-in {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-animation: fade-in 0.5s ease-in-out;
+    -moz-animation: fade-in 0.5s ease-in-out;
+    -o-animation: fade-in 0.5s ease-in-out;
+    animation: fade-in 0.5s ease-in-out;
+    z-index: 101;
+}
+
+.page-back-in {
+    -webkit-animation: fade-out reverse 0.5s ease-in-out;
+    -moz-animation: fade-out reverse 0.5s ease-in-out;
+    -o-animation: fade-out reverse 0.5s ease-in-out;
+    animation: fade-out reverse 0.5s ease-in-out;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.page-back-in:before {
+    background: rgba(0, 0, 0, 0.7);
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.page-back-out {
+    -webkit-animation: fade-in reverse 0.5s ease-in-out forwards;
+    -moz-animation: fade-in reverse 0.5s ease-in-out forwards;
+    -o-animation: fade-in reverse 0.5s ease-in-out forwards;
+    animation: fade-in reverse 0.5s ease-in-out forwards;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 101;
+}
+
+@-webkit-keyframes fade-out {
+    from {
+        -webkit-transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-30%);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-30%);
+    }
+}
+
+@-webkit-keyframes fade-in {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sub-page-with-footer {
+    padding-bottom: 4.25rem;
+}
+
+.page-footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.3125rem;
+    padding-top: 0.3125rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/**
+ * 商品详情
+ * @author Ash.Zhang
+ * @create 2015/08/13
+ */
+.gift-detail-thumb {
+    position: relative;
+}
+
+.gift-detail-img {
+    vertical-align: top;
+}
+
+.gift-detail-title {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.625rem;
+}
+
+.gift-detail-title .gift-price {
+    margin-left: 0.625rem;
+}
+
+.gift-detail-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.gift-detail-points {
+    font-size: 1.25rem;
+    vertical-align: -1px;
+}
+
+.gift-detail-points > .iconfont {
+    font-size: 1.3333333rem;
+    vertical-align: 1px;
+}
+
+.gift-detail-left {
+    float: right;
+    margin-top: 0.3333333rem;
+}
+
+.gift-detail-info {
+    font-size: 0.875rem;
+    padding-top: 1.25rem;
+}
+
+.gift-detail-info > p {
+    text-indent: 2em;
+}
+
+.gift-detail-info ul,
+.gift-detail-info ol {
+    margin-left: 18px;
+}
+
+.gift-detail-info-title {
+    border-left: 0.3125rem solid #f54365;
+    margin-bottom: 0.625rem;
+    padding-left: 0.3125rem;
+}
+
+.gift-detail-footer-current {
+    font-size: 0.875rem;
+    height: 3rem;
+    line-height: 1.5rem;
+    vertical-align: top;
+}
+
+.gift-detail-footer-current > em {
+    font-size: 1.3333333rem;
+}
+
+.gift-detail-gift-ani {
+    color: #f54365;
+    font-size: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    bottom: 0.625rem;
+    right: 17%;
+}
+
+.gift-detail-gift-ani.adding {
+    -webkit-animation: gift-ani 0.5s ease-in-out forwards;
+    -moz-animation: gift-ani 0.5s ease-in-out forwards;
+    -o-animation: gift-ani 0.5s ease-in-out forwards;
+    animation: gift-ani 0.5s ease-in-out forwards;
+    opacity: 1;
+}
+
+@-webkit-keyframes gift-ani {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    25% {
+        -webkit-transform: scale(1);
+    }
+    75% {
+        -webkit-transform: scale(1.2);
+        bottom: 50%;
+    }
+    100% {
+        -webkit-transform: scale(0);
+        right: 1.25rem;
+        bottom: 40%;
+    }
+}
+
+@keyframes gift-ani {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+        bottom: 50%;
+    }
+    100% {
+        transform: scale(0);
+        right: 1.25rem;
+        bottom: 40%;
+    }
+}
+
+/*# sourceMappingURL=../css/gift-detail.css.map */

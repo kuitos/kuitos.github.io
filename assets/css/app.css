@@ -1,0 +1,3712 @@
+@charset "UTF-8";
+
+/*Spinner Bar*/
+.page-spinner-bar {
+    position: fixed;
+    z-index: 10051;
+    width: 100px;
+    top: 40%;
+    left: 50%;
+    margin-left: -55px;
+    text-align: center;
+}
+
+/*File Upload Button*/
+.file-input-button {
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    border: solid 1px #e3e3e3;
+}
+
+.file-button-top7-lf24 {
+    top: 7px;
+    left: -25px;
+}
+
+.file-button-top1-lf22 {
+    position: relative;
+    left: -16px;
+}
+
+.file-input-button input {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    /*font-size: 200px;*/
+    font-size: 20px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.upload-add-true {
+    background: url(../images/btn_bg.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    text-indent: 24px;
+    display: inline-block;
+    height: 24px;
+    padding-right: 10px;
+}
+
+.upload-add-false {
+    background: url(../images/stores-images.png) no-repeat rgba(0, 0, 0, 0);
+    background-position: 0px -170px;
+    display: inline-block;
+    height: 25px;
+    width: 20px;
+    padding-right: 10px;
+}
+
+.upload-box {
+    margin-top: -22px;
+}
+
+@media screen\9 {
+    .file-input-button input {
+        filter: alpha(opacity=0);
+        font-size: 100%;
+        height: 100%;
+    }
+}
+
+/*积分首页*/
+.data-header {
+    height: 35px;
+    line-height: 35px;
+    background: #f2f2f2;
+    border-bottom: solid 2px #e9e9e9;
+}
+
+.data-content {
+    color: #3d3d3d;
+    font-size: 12px;
+}
+
+.data-content button, .data-content .transparent {
+    background-color: #0074cc;
+    *background-color: #0074cc;
+    /*CSS渐变制作背景图片*/
+    background-image: -ms-linear-gradient(top, #31b1eb, #2495c7);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#31b1eb), to(#2495c7));
+    background-image: -webkit-linear-gradient(top, #31b1eb, #2495c7);
+    background-image: -o-linear-gradient(top, #31b1eb, #2495c7);
+    background-image: -moz-linear-gradient(top, #31b1eb, #2495c7);
+    background-image: linear-gradient(top, #31b1eb, #2495c7);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#31b1eb', endColorstr='#2495c7', GradienType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    display: inline-block;
+    *display: inline-block;
+    *border: 0px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 150%;
+    padding: 2px 13px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    *zoom: 1;
+    position: relative;
+    top: -2px;
+}
+
+.data-content .transparent {
+    background: transparent;
+    color: #145681;
+}
+
+.icon-list {
+    display: table;
+    width: 100%;
+}
+
+.icon-list li {
+    display: table-cell;
+    float: left;
+    min-width: 230px;
+    width: 25%;
+    padding: 5px;
+}
+
+.icon-list li .item-div-orange,
+.icon-list li .item-div-yellow,
+.icon-list li .item-div-green,
+.icon-list li .item-div-blue {
+    position: relative;
+    height: 85px; /*240*/
+    width: 100%;
+}
+
+.icon-list li .item-div-orange {
+    background-color: #f18100;
+}
+
+.icon-list li .item-div-yellow {
+    background-color: #ffcc63;
+}
+
+.icon-list li .item-div-green {
+    background-color: #73d4c5;
+}
+
+.icon-list li .item-div-blue {
+    background-color: #3ba2ba;
+}
+
+.icon-list li .item-content {
+    position: absolute;
+    top: 20px;
+    height: 40px;
+    width: 100%;
+}
+
+.icon-list li .item-content p {
+    text-indent: 95px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.icon-list li .item-content p:first-child {
+    font-size: 24px;
+}
+
+.icon-list li .item-icon-grant,
+.icon-list li .item-icon-consume,
+.icon-list li .item-icon-grantCount,
+.icon-list li .item-icon-consumeCount {
+    background: url(../images/icon-logo.png) no-repeat 0px 0px;
+}
+
+.icon-list li .item-icon-grant {
+    background-position: 35px 0px;
+}
+
+.icon-list li .item-icon-consume {
+    background-position: 35px -44px;
+}
+
+.icon-list li .item-icon-grantCount {
+    background-position: 35px -88px;
+}
+
+.icon-list li .item-icon-consumeCount {
+    background-position: 35px -137px;
+}
+
+.item-set {
+    height: 60px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.item-set .set-logo {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+}
+
+.item-set .consume-logo {
+    background: url(../images/all.png) no-repeat -52px -580px;
+}
+
+.item-set .comment-logo {
+    background: url(../images/all.png) no-repeat -102px -580px;
+}
+
+.item-set .sign-logo {
+    background: url(../images/all.png) no-repeat -147px -580px;
+}
+
+.item-set .collect-logo {
+    background: url(../images/all.png) no-repeat -193px -580px;
+}
+
+.item-set .subscribe-logo {
+    background: url(../images/all.png) no-repeat -235px -580px;
+}
+
+.item-set .birthday-logo {
+    background: url(../images/all.png) no-repeat -276px -580px;
+}
+
+.item-set .generalize-logo {
+    background: url(../images/all.png) no-repeat -319px -580px;
+}
+
+.item-set p {
+    position: absolute;
+    top: 6px;
+    text-indent: 80px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.item-set > p:last-child {
+    top: 28px;
+    color: #787878;
+}
+
+.item-set .details-container {
+    float: right;
+}
+
+.item-set .details-container span {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #000000;
+    display: inline-block;
+    width: 155px;
+    text-indent: 0px;
+}
+
+.item-set .details-container span a {
+    text-decoration: none;
+    color: #ff7815;
+}
+
+.item-set .look-grid {
+    color: #0083ba;
+    background: url(../images/all.png) no-repeat 0px -710px;
+    text-indent: 15px;
+    position: absolute;
+    left: 200px;
+    cursor: pointer;
+}
+
+.active-open, .active-close {
+    background: url(../images/all.png) no-repeat 0px -747px;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+}
+
+.active-close {
+    background: url(../images/all.png) no-repeat 0px -729px;
+}
+
+/*配置页面样式*/
+.config-list {
+    width: 100%;
+    display: table;
+    max-width: 1080px;
+}
+
+.config-list li {
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 20px;
+    display: table-cell;
+    float: left;
+}
+
+.config-list li > .config-box {
+    position: relative;
+    width: 250px;
+    height: 140px;
+    border-radius: 5px;
+    border: solid 1px #e5e5e5;
+    background: #f8f8f8;
+}
+
+.config-list li > .config-box:hover {
+    border: solid 1px #5eb4db;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.config-list li > .config-box:hover .del-box {
+    display: block;
+}
+
+.config-list li > .config-box .del-box {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: none;
+}
+
+.config-list li > .config-box .name-box {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+
+.config-list li > .config-box .intros-box {
+    position: absolute;
+    top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 64px;
+    font-size: 12px;
+    color: #afafaf;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 8px;
+}
+
+.config-list li > .config-box .on-off-box {
+    position: absolute;
+    top: 108px;
+    right: 12px;
+}
+
+.config-list li > .config-box .add-box {
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    text-align: center;
+}
+
+.config-list li .bg-white {
+    background: #ffffff;
+}
+
+.dialog ul {
+    width: 100%;
+    display: table;
+    padding-bottom: 20px;
+}
+
+.dialog ul li {
+    float: left;
+    display: table-cell;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
+
+.dialog ul li > .sub-config-box {
+    width: 198px;
+    height: 95px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border: solid 1px #e2e2e2;
+    position: relative;
+}
+
+.dialog ul li > .sub-config-box:hover {
+    background: #fefefe;
+    border: solid 1px #74bcdc;
+}
+
+.dialog ul li > .sub-config-box:hover .sub-intros-box {
+    display: none;
+}
+
+.dialog ul li > .sub-config-box:hover .sub-add-box {
+    display: block;
+}
+
+.dialog ul li > .sub-config-box > .sub-name-box {
+    position: absolute;
+    top: 20px;
+    font-size: 14px;
+    color: #666666;
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+
+.dialog ul li > .sub-config-box > .sub-intros-box {
+    position: absolute;
+    font-size: 11px;
+    color: #afafaf;
+    top: 43px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 18px;
+    height: 45px;
+    overflow: hidden;
+
+}
+
+.dialog ul li > .sub-config-box > .sub-add-box {
+    position: absolute;
+    top: 47px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.dialog ul li > .sub-config-box > .sub-add-box > button {
+    padding: 3px 16px;
+    font-size: 11px;
+}
+
+/*配置页面样式 end*/
+
+/*发放纪录*/
+.record-condition-top {
+    background: none repeat scroll 0 0 #F9F9F9;
+    margin: 0 auto;
+    border: 1px solid #EFEFEF;
+    width: 100%;
+    display: table;
+}
+
+.record-condition-top .condition {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.record-condition-top .condition > form > table {
+    width: 90%;
+    margin: 5px auto;
+}
+
+.record-condition-top .condition > form > table > tbody > tr > td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.record-condition-top ul {
+    width: 95%;
+    margin: 10px auto;
+    display: table-cell;
+}
+
+.record-condition-top ul li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.record-condition-top ul li label {
+    font-size: 12px;
+}
+
+.yellow-div {
+    width: 100%;
+    margin: 5px auto;
+    color: #666666;
+    line-height: 180%;
+    font-size: 12px;
+}
+
+.record-table {
+    width: 99%;
+    margin: 2px auto;
+}
+
+/*****************界面设置**********************/
+.ui-set {
+    width: 99%;
+    margin: 0 auto;
+}
+
+.ui-set .sign,
+.ui-set .collect,
+.ui-set .evaluate,
+.ui-set .birthdays,
+.ui-set .email {
+    width: 990px;
+    margin: 0px auto 10px auto;
+}
+
+.ui-set .sign .show,
+.ui-set .collect .show,
+.ui-set .evaluate .show,
+.ui-set .birthdays .show,
+.ui-set .email .show {
+    width: 100%;
+    padding: 5px 0 10px 0;
+    border: 1px solid #DCDCDC
+}
+
+.ui-set .sign .show > form > p,
+.ui-set .collect .show > form > p,
+.ui-set .evaluate .show > form > p,
+.ui-set .birthdays .show > form > p,
+.ui-set .email .show > form > p {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ui-set .evaluate .show .prompt,
+.ui-set .birthdays .show .prompt,
+.ui-set .email .show .prompt {
+    top: 4px;
+    right: 20px;
+    color: #bebebe;
+}
+
+.ui-set .sign .show-images .title,
+.ui-set .collect .show-images .title,
+.ui-set .evaluate .show-images .title,
+.ui-set .birthdays .show-images .title,
+.ui-set .email .show-images .title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+
+.ui-set .sign .show-images .emailBox,
+.ui-set .collect .show-images .emailBox,
+.ui-set .evaluate .show-images .emailBox,
+.ui-set .birthdays .show-images .emailBox,
+.ui-set .email .show-images .emailBox {
+    background-image: url(http://img04.taobaocdn.com/imgextra/i4/48291977/TB2iZbRXVXXXXbHXXXXXXXXXXXX-48291977.png);
+    background-repeat: no-repeat;
+    width: 990px;
+    height: 454px;
+}
+
+/*邮件送积分样式*/
+.f13 {
+    font-size: 13px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.w268 {
+    width: 268px;
+}
+
+.w1000 {
+    width: 1000px;
+}
+
+.emailBoxCont {
+    background: rgba(0, 0, 0, 0.3);
+    left: 540px;
+    top: 140px;
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+}
+
+.emailIcon, .sendIcon {
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-position: 2px -235px;
+    display: inline-block;
+    height: 20px;
+    margin-top: 3px;
+    width: 40px;
+}
+
+.emailBoxContBg {
+    background: none repeat scroll 0 0 #7AC0C6;
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+    height: 30px;
+    width: 40px;
+}
+
+.emailBoxContInput {
+    border-radius: 0px 3px 3px 0px;
+    background: #fff;
+    width: 220px;
+    height: 30px;
+    border: medium none
+}
+
+.emailBoxContButton {
+    background: none repeat scroll 0 0 #7AC0C6;
+    border-radius: 3px;
+    border: medium none;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 0px 10px;
+}
+
+.myval {
+    top: 4px;
+    right: 4px;
+    color: #ccc;
+}
+
+.emailIcon {
+    background-position: 2px -211px;
+}
+
+.sendIcon {
+    background-position: 2px -235px;
+}
+
+/*颜色配置*/
+
+/*****************界面设置   end  **********************/
+
+/***********************签到、收藏、评价送积分样式***********************/
+.sign .sign-set-list,
+.collect .collect-set-list,
+.evaluate .evaluate-set-list
+.birthdays .birthdays-set-list,
+.email .email-set-list {
+    margin: 0 auto;
+}
+
+.sign .sign-set-list .item,
+.collect .collect-set-list .item,
+.evaluate .evaluate-set-list .item,
+.birthdays .birthdays-set-list .item,
+.email .email-set-list .item {
+    width: 95%;
+    margin: 0 auto;
+    line-height: 160%;
+    border: solid 1px #bbbbbb;
+    padding: 10px 0;
+    border-top: none;
+}
+
+.sign .sign-set-list .item:first-child,
+.collect .collect-set-list .item:first-child,
+.evaluate .evaluate-set-list .item:first-child,
+.birthdays .birthdays-set-list .item:first-child,
+.email .email-set-list .item:first-child {
+    border-top: solid 1px #bbbbbb;
+}
+
+/** 标题容器*/
+.sign .sign-set-list .title,
+.collect .collect-set-list .title,
+.evaluate .evaluate-set-list .title,
+.birthdays .birthdays-set-list .title,
+.email .email-set-list .title {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/** 标题*/
+.sign .sign-set-list .title .name,
+.collect .collect-set-list .title .name,
+.evaluate .evaluate-set-list .title .name,
+.birthdays .birthdays-set-list .title .name,
+.email .email-set-list .title .name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/** 内容*/
+.sign .sign-set-list .item .content,
+.collect .collect-set-list .item .content,
+.evaluate .evaluate-set-list .item .content,
+.birthdays .birthdays-set-list .item .content,
+.email .email-set-list .item .content {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 12px;
+}
+
+input[type='text'].readonly {
+    background: #e8e8e8;
+}
+
+/*编辑状态下*/
+.sign .sign-set-list .item .content > form,
+.collect .collect-set-list .item .content > form,
+.evaluate .evaluate-set-list .item .content > form,
+.birthdays .birthdays-set-list .item .content > form,
+.email .email-set-list .item .content > form {
+    margin-bottom: 10px;
+}
+
+.sign .sets .item .content > form > p {
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.sign .sets .item .content > form > p > span:first-child {
+    width: 100%;
+}
+
+.sign .item .content > form > p > span,
+.collect .item .content > form > p > span,
+.birthdays .item .content > form > p > span,
+.email .item .content > form > p > span {
+    margin-bottom: 5px;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.sign .rules .jf-type {
+    position: relative;
+    top: -29px;
+}
+
+.color-red {
+    color: #ff0000;
+}
+
+.color-gray {
+    color: #868686;
+}
+
+/*屏幕小于1200px使用此样式*/
+@media screen  and (min-width: 1200px) {
+    .sign .sets .item .content > form > p {
+        border-bottom: none;
+    }
+
+    .sign .sets .item .content > form > p > span:first-child {
+        width: auto;
+    }
+}
+
+/** 签到送积分－表格*/
+.sign .sign-set-list .item .table {
+    margin: 0px 0px 10px 0px;
+}
+
+.sign .sign-set-list .item .table tr td {
+    border: none;
+}
+
+/*收藏送积分*/
+.sign .edit-item label,
+.collect .edit-item label,
+.evaluate .edit-item label {
+    font-size: 12px;
+}
+
+/** 尾部*/
+.sign .footer,
+.collect .footer,
+.evaluate .footer {
+    line-height: 180%;
+    text-align: right;
+    padding: 5px 20px 5px 0px;
+    font-size: 12px;
+}
+
+.input-hide {
+    width: 100%;
+    height: 0px;
+    display: flex;
+}
+
+/***********************签到、收藏、评价送积分样式 end***********************/
+
+/***********************积分抵钱购样式 **********************/
+
+.page-moneys .moneys-desc {
+    background: #fdffd6;
+    border: 1px solid #ffe0cd;
+    padding: 10px;
+    width: 100%;
+    line-height: 150%;
+    font-size: 12px;
+}
+
+.page-moneys .moneys-desc .title {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.page-moneys .moneys-desc .content {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.page-moneys .moneys-sets {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    display: table;
+    max-width: 900px;
+}
+
+.page-moneys .moneys-sets div.top {
+    line-height: 180%;
+    padding: 5px 20px 5px 0px;
+    font-size: 12px;
+}
+
+.page-moneys .coupon-sets .sets-list {
+    padding-bottom: 10px;
+    width: 100%;
+    display: table;
+}
+
+.page-moneys .moneys-sets .sets-list li {
+    display: table-cell;
+    float: left;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div {
+    border: 1px solid #ececec;
+    margin: 10px 10px 0 0;
+    position: relative;
+    z-index: 0;
+    height: 219px;
+    width: 203px;
+    overflow: hidden;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.count-div {
+    width: 203px;
+    line-height: 150%;
+    margin: 5px 0 0 0;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div .moneys-img {
+    height: 219px;
+    width: 203px;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div .moneys-img:hover {
+    opacity: 0.4;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div .edit-div:hover {
+    display: block;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div .moneys-img:hover + div.edit-div {
+    display: block;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div .edit-div:hover + .moneys-img {
+    opacity: 0.4;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.edit-div {
+    width: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.button-div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#6c685f', EndColorStr='#6c685f');
+    color: #fff;
+    font-size: 12px;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.button-div .desc {
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    width: 75px;
+    position: absolute;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.button-div .price {
+    position: absolute;
+    background: url(../images/stores-images.png) no-repeat scroll -25px -167px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    line-height: 40px;
+    left: 75px;
+    padding-left: 20px;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.button-div .btn-dh {
+    position: absolute;
+    display: inline-block;
+    height: 40px;
+    width: 45px;
+    line-height: 20px;
+    left: 157px;
+    padding: 0px 5px 0 5px;
+    background: #7ac0c6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.add-div {
+    width: 100%;
+    height: 65px;
+    display: inline-block;
+    margin-top: 72px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.page-moneys .moneys-sets .sets-list li > div.set-div > div.add-div > div.add-logo {
+    background: url(../images/packagePt.png) no-repeat -30px -16px;
+    width: 40px;
+    height: 40px;
+    margin: 2px auto;
+}
+
+/***********************积分抵钱购样式 end***********************/
+
+/***********************商品选择器样式 end***********************/
+.selections-search-box {
+    border: 1px solid #d6effe;
+    background: #ecf8fc;
+    padding: 6px 0 6px 8px;
+}
+
+.goods-container-box {
+    height: 400px;
+    position: relative;
+}
+
+.goods-list-right, .goods-list-left {
+    border: 1px solid #e8e8e8;
+    width: 44%;
+    position: absolute;
+}
+
+.goods-list-right {
+    right: 0;
+    top: 6px;
+    bottom: 5px;
+}
+
+.goods-list-left {
+    left: 0;
+    top: 6px;
+    bottom: 5px;
+}
+
+.goods-list-all, .goods-list-bottom {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.goods-list-all span {
+    cursor: pointer;
+}
+
+.goods-list {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 32px;
+    overflow-y: auto;
+}
+
+.goods-list > .item {
+    position: relative;
+}
+
+.goods-list label {
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+    border: none;
+    background: #fcfcfc;
+    padding: 5px 11px;
+    border-bottom: 1px solid #ddd;
+}
+
+.goods-list tr:last-child label {
+    border-bottom: none
+}
+
+.goods-list label:hover {
+    background: #ebf0ee;
+}
+
+.goods-list-bottom {
+    position: absolute;
+    bottom: 0;
+    color: #999999;
+    border-top: 1px solid #eaeaea;
+    border-bottom: none;
+}
+
+.goods-add {
+    top: 180px;
+    left: 46%;
+}
+
+.goods-add .btn-add-goods {
+    background: url(../images/packagePt.png) no-repeat 0 -366px;
+    padding: 0;
+    display: inline-block;
+    width: 62px;
+    height: 20px;
+}
+
+.goods-list-left .items, .goods-list-right .items {
+    /* padding: 10px; */
+    /* margin: 0 8px; */
+    /* border-bottom: 1px dashed #ccc; */
+    min-height: 50px;
+    position: relative;
+    /* background: #fcfcfc; */
+}
+
+.goods-list-left .items .goods-img, .goods-list-right .items .goods-img {
+    width: 80px;
+    height: 45px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.goods-list-left .items .goods-img img, .goods-list-right .items .goods-img img {
+    width: 45px;
+    height: 45px;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+.goods-list-left .items .goods-text, .goods-list-right .items .goods-text {
+    width: 72%;
+    height: 45px;
+    position: absolute;
+    top: 2px;
+    left: 80px;
+    color: #999999;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.goods-list-left .items .goods-text .goods-name, .goods-list-right .items .goods-text .goods-name {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.goods-list-left .items .goods-text .added {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 1.2em;
+    color: #2345F2;
+}
+
+.btn-choose-goods {
+    top: -1px;
+    position: relative;
+}
+
+.goods-list-left .items .goods-text .goods-id,
+.goods-list-right .items .goods-text .goods-id,
+.goods-list-left .items .goods-text .goods-price,
+.goods-list-right .items .goods-text .goods-price {
+    width: 48%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.goods-list-left .items .goods-text .goods-price,
+.goods-list-right .items .goods-text .goods-price {
+    color: #fe8c8c;
+}
+
+.goods-list-page {
+    background: url(../images/table-bg.jpg) repeat-x 0 0;
+    height: 30px;
+    line-height: 30px;
+    color: #636363;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom: solid 1px #e8e8e8;
+    border-top: solid 1px #e8e8e8;
+    font-weight: inherit;
+    font-size: 12px;
+}
+
+.goods-list-page .prevNone,
+.goods-list-page .prev,
+.goods-list-page .next,
+.goods-list-page .nextNone {
+    background: url(../images/table-mark.jpg) no-repeat 0 0;
+    border: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.goods-list-page .prevNone {
+    background-position: -8px -10px;
+}
+
+.goods-list-page .prev {
+    background-position: -28px -10px;
+}
+
+.goods-list-page .next {
+    background-position: -11px -49px;
+    margin-left: 10px;
+}
+
+.goods-list-page .nextNone {
+    background-position: -26px -49px;
+}
+
+.close-goods {
+    height: 14px;
+    width: 14px;
+    float: right;
+    font-size: 1.5em;
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.close-goods:hover {
+    opacity: 0.6;
+}
+
+/*****************消费送积分******************/
+.items-list {
+    width: 100%;
+    border: solid 1px #F0F0F0;
+}
+
+.items-box {
+    background: #f0f0f0;
+    height: 35px;
+    line-height: 32px;
+}
+
+.shielding-list li > .shielding-name {
+    height: 42px;
+    line-height: 42px;
+    width: 98%;
+    font-size: 12px;
+    color: #3a3a3a;
+    border-bottom: dashed 1px #e5e5e5;
+    margin: 0 auto;
+    padding-left: 18px;
+}
+
+.shielding-list li:last-child > .shielding-name {
+    border-bottom: none;
+}
+
+.shielding-list li > .shielding-name:hover {
+    background: #eef8fc;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.shielding-list li:last-child > .shielding-name:hover {
+    border-bottom: none;
+}
+
+.shielding-list li {
+    border: solid 1px #e5e5e5;
+}
+
+.shielding-list li .shielding-content {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 10px;;
+    position: relative;
+}
+
+.shielding-list li .shielding-content > p {
+    font-size: 12px;
+    color: #000000;
+}
+
+.shielding-list li .shielding-content > table tbody tr th {
+    padding-left: 50px;
+    line-height: 180%;
+    padding-right: 50px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.shielding-list li .shielding-content > table tbody tr td {
+    line-height: 200%;
+    border-bottom: dashed 1px #e5e5e5;
+    padding-right: 50px;
+    padding-left: 5px;
+}
+
+.shielding-list li .shielding-content > .close-box {
+    font-size: 12px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.add-rulers {
+    display: inline-block;
+    cursor: pointer;
+    background: url(../images/stores-images.png) no-repeat -1px -142px;
+    height: 28px;
+    width: 82px;
+    position: relative;
+    top: 10px;
+}
+
+.add-rulers-dec {
+    vertical-align: super;
+    padding-left: 20px;
+}
+
+@-moz-document url-prefix() {
+    .add-rulers {
+        top: -3px;
+    }
+    .btn-choose-goods {
+        top: -2px;
+    }
+
+}
+
+.rulers-top {
+    height: 40px;
+    line-height: 40px;
+}
+
+.rulers-header {
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.rulers-operate {
+    display: none;
+}
+
+.rulers-header:hover .rulers-operate {
+    display: block;
+}
+
+.rulers-name {
+    padding-left: 25px;
+}
+
+.rulers-items {
+    border: solid 1px #e5e5e5;
+    line-height: 160%;
+    font-size: 12px;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+}
+
+.rulers-items .items-box {
+    background: #f0f0f0;
+    height: 35px;
+    line-height: 35px;
+    color: #3a3a3a;
+    font-size: 13px;
+}
+
+/*.rulers-header .button-delete,*/
+/*.rulers-items .items-box .button-delete {*/
+    /*position: relative;*/
+    /*top: -2px;*/
+/*}*/
+
+.rulers-items .items-box .orientations-top,
+.rulers-items .items-box .orientations-bottom {
+    position: relative;
+    top: 3px;
+}
+
+.rulers-items .items-box .orientations-bottom {
+    top: 4px;
+}
+
+@-moz-document url-prefix() {
+    .rulers-items .items-box .orientations-top,
+    .rulers-items .items-box .orientations-bottom {
+        position: relative;
+        top: -7px;
+    }
+}
+
+.rulers-items .rulers-box .rulers-left {
+
+    display: table-cell;
+    width: 15%;
+    text-align: right;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.rulers-items .rulers-box .rulers-main {
+    display: table-cell;
+    padding: 10px 10px 10px 0;
+    width: 30%;
+}
+
+.rulers-items .rulers-box .rulers-right {
+    display: table-cell;
+    width: 30%;
+    padding: 10px;
+    font-size: 12px;
+    color: #3a3a3a;
+    position: relative;
+}
+
+.rulers-items .rulers-box .rulers-right table.extra-table {
+    margin-left: 35px;
+    width: 310px;
+}
+
+.rulers-items .rulers-box .rulers-right table.extra-table th {
+    padding-left: 0;
+}
+
+.rulers-items .rulers-box .rulers-right table.extra-table td {
+    width: 220px;
+}
+
+.rulers-items .rulers-box .rulers-right > div {
+    border-left: dashed 1px #e5e5e5;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.rulers-items .rulers-box .rulers-main > div {
+    background: #f7f7f7;
+    padding: 10px;
+    width: 550px;
+}
+
+.rulers-items .rulers-box .rulers-main > div > table tbody tr th {
+    padding-left: 10px;
+    line-height: 180%;
+    padding-right: 10px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.rulers-items .rulers-box .rulers-main > div > table tbody tr td {
+    line-height: 200%;
+    border-bottom: dashed 1px #e5e5e5;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.rulers-items .rulers-box .rulers-right > div > table tbody tr td input[type='radio'] {
+    margin: 0 5px;
+}
+
+.rulers-items .rulers-box .rulers-right > div > table tbody tr th {
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #3a3a3a;
+    padding-left: 10px;
+}
+
+.rulers-footer {
+    font-size: 12px;
+    color: #8e8d8d;
+    line-height: 200%;
+    padding: 18px 0;
+}
+
+.rulers-footer span {
+    margin-left: 8px;
+}
+
+.standards-box {
+    background: #f9f9f9;
+    border: 1px solid #cccccc;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+.standards-box table {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.standards-box table > tbody > tr > th {
+    width: 100px;
+    line-height: 24px;
+    text-align: right;
+    height: 32px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.ranks-ul {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.ranks-ul > li {
+    ine-height: 32px;
+    height: 32px;
+}
+
+.ranks-ul .ranks-box {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+/*****************消费送积分******************/
+
+/************************会员卡设置*************************/
+.plans-set-box {
+    /*padding-top: 60px;*/
+    max-width: 800px;
+}
+
+.plans-set-box .tab1-box,
+.plans-set-box .tab2-box,
+.plans-set-box .tab3-box {
+    width: 668px;
+    height: 20px;
+    margin: 0 auto;
+    background: url(../images/cards-set.png) no-repeat;
+}
+
+.plans-set-box .tab1-box {
+    background-position: 0px 0px;
+}
+
+.plans-set-box .tab2-box {
+    background-position: 0px -20px;
+}
+
+.plans-set-box .tab3-box {
+    background-position: 0px -40px;
+}
+
+.plans-set-box .cards-box {
+    width: 668px;
+    /*margin: 0 auto;*/
+}
+
+.plans-set-box .taoBaoSet {
+    border: solid 1px #eeeeee;
+    background: #f9f9f9;
+    padding: 68px;
+    margin-top: 20px;
+}
+
+.pl65 {
+    padding-left: 65px;
+}
+
+.plans-set-box .taoBaoSet .shuYunLogo-box {
+    background: url(../images/shuyunlogo.png) no-repeat;
+    height: 170px;
+    padding-left: 140px;
+    padding-top: 40px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 180%;
+}
+
+.plans-set-box .cards-box .startUsing {
+    margin-right: 5px;
+}
+
+.plans-set-box .cards-box .intro-box {
+    width: 100%;
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 24px;
+    border: solid 1px #eeeeee;
+    background: #f9f9f9;
+    padding: 25px 25px 60px 25px;
+    margin-top: 30px;
+}
+
+.plans-set-box .cards-box .btn-box {
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+.plans-set-box .cards-box .selections-box {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box {
+    display: table-cell;
+}
+
+.plans-set-box .cards-box .selections-box .selections-right-box {
+    display: table-cell;
+    padding-left: 65px;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .selection-box,
+.plans-set-box .cards-box .selections-box .selections-right-box .selection-box {
+    width: 300px;
+    border: solid 2px #e5e5e5;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box > .active-true,
+.plans-set-box .cards-box .selections-box .selections-right-box > .active-true {
+    border: solid 2px #0083ba;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .selection-box .name-box,
+.plans-set-box .cards-box .selections-box .selections-right-box .selection-box .name-box {
+    background: #f0f0f0;
+    color: #3a3a3a;
+    font-size: 13px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .selection-box > .active-true,
+.plans-set-box .cards-box .selections-box .selections-right-box .selection-box > .active-true {
+    background: #0083ba;
+    color: #ffffff;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .contents-box,
+.plans-set-box .cards-box .selections-box .selections-right-box .contents-box {
+    width: 275px;
+    margin: 0px auto;
+    padding: 15px 10px;
+    color: #666666;
+    font-size: 12px;
+    line-height: 24px;
+    border-bottom: dashed 1px #cfcfcf;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .contents-box:last-child,
+.plans-set-box .cards-box .selections-box .selections-right-box .contents-box:last-child {
+    border-bottom: none;
+}
+
+.plans-set-box .cards-box .selections-box .selections-left-box .contents-box strong,
+.plans-set-box .cards-box .selections-box .selections-right-box .contents-box strong {
+    font-size: 12px;
+    color: #3d3d3d;
+}
+
+.plans-set-box .cards-box .href-box {
+    font-size: 12px;
+    color: #248cbf;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.plans-set-box .cards-box .href-box span {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.mark-true {
+    height: 15px;
+    width: 18px;
+    display: inline-block;
+    background: url(../images/stores-images.png) no-repeat -18px -75px;
+}
+
+.points-items {
+    width: 100%;
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 24px;
+    border: solid 1px #eeeeee;
+    background: #f9f9f9;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.dialog-add-point-type .points-items {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.points-items button.button-delete {
+    display: none;
+}
+
+.plans-set-box .cards-box .points-items .points-table,
+.dialog-add-point-type .points-items .points-table {
+    color: #3d3d3d;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td:first-child,
+.dialog-add-point-type .points-items .points-table tbody tr td:first-child {
+    width: 122px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td,
+.dialog-add-point-type .points-items .points-table tbody tr td {
+    padding: 5px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td .des-box,
+.dialog-add-point-type .points-items .points-table tbody tr td .des-box {
+    display: inline-block;
+    font-size: 12px;
+    color: #868686;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td > p,
+.dialog-add-point-type .points-items .points-table tbody tr td > p {
+    padding-bottom: 10px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td input[type='text'],
+.plans-set-box .cards-box .points-items .points-table tbody tr td select,
+.dialog-add-point-type .points-items .points-table tbody tr td input[type='text'],
+.dialog-add-point-type .points-items .points-table tbody tr td select {
+    height: 24px;
+    margin-right: 5px;
+    margin-left: 2px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td .input-hide[type='text'],
+.dialog-add-point-type .points-items .points-table tbody tr td .input-hide[type='text'] {
+    height: 0px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td input[type='checkbox'],
+.dialog-add-point-type .points-items .points-table tbody tr td input[type='checkbox'] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td select,
+.dialog-add-point-type .points-items .points-table tbody tr td select {
+    display: inline-block;
+    height: 24px;
+}
+
+.plans-set-box .cards-box .points-items .points-table tbody tr td input[type='radio'],
+.dialog-add-point-type .points-items .points-table tbody tr td input[type='radio'] {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.plans-set-box .cards-box .add-type-box {
+    padding-left: 133px;
+    padding-top: 30px;
+}
+
+.button-add-type {
+    background: url(../images/stores-images.png) no-repeat 0px -117px;
+    height: 26px;
+    width: 85px;
+    cursor: pointer;
+}
+
+.plans-set-box .cards-box .points-items:hover {
+    border: solid 1px #66b7dc;
+}
+
+.plans-set-box .cards-box .points-items:hover button.button-delete {
+    display: block;
+}
+
+.details-contrast {
+    width: 100%;
+}
+
+.details-contrast tbody tr th {
+    background: #f0f0f0;
+    padding: 5px;
+    border: solid 1px #dddddd;
+}
+
+.details-contrast tbody tr td {
+    padding: 5px;
+    border: solid 1px #dddddd;
+}
+
+/************** 手工设置  *************/
+.settings-box .intros-box {
+    color: #FF9966;
+    padding: 5px;
+    border: 1px solid #ff9966;
+    background: #fdffd6;
+    line-height: 150%;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.settings-box .setting-box {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #EFEFEF;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+}
+.settings-box .setting-box  .nike-select{
+    min-width: 150px;
+}
+.settings-box .setting-box form .setting-table tbody tr td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.settings-box .setting-box form .setting-table tbody tr td:first-child {
+    width: 120px;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 240%;
+    font-size: 12px;
+}
+
+.integral-desc {
+    width: 236px;
+    height: 48px;
+    resize: none;
+    padding: 6px;
+}
+
+/************** 手工设置 end  *************/
+
+/************** 积分导入 end  *************/
+.upload-file-name-box {
+    background: url(../images/uploadify-ico.png) no-repeat;
+    background-position: 8px 8px;
+    padding: 5px;
+    text-align: left;
+}
+
+.upload-file-name-box > p {
+    text-indent: 50px;
+    line-height: 20px;
+}
+
+/************** 积分详情  *************/
+.color-piece-box {
+
+}
+
+.collect-ul {
+    display: table;
+    width: 100%;
+}
+
+.collect-ul > li {
+    display: table-cell;
+    width: 20%;
+}
+
+.piece-box {
+    width: 95%;
+    min-width: 181px;
+    height: 86px;
+    box-shadow: 2px 5px 6px #bbb;
+    overflow: hidden;
+}
+
+.piece-box > div {
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    position: relative;
+    top: 26px;
+    left: 35px;
+    width: 85px;
+    padding-left: 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inset-ul > li:first-child > span {
+    font-size: 20px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.inset-ul > li {
+    display: block;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.orange-bg {
+    background-color: #f18100;
+}
+
+.blue-grey-bg {
+    background-color: #3ba2ba;
+}
+
+.yellow-bg {
+    background-color: #ffcc63;
+}
+
+.green-bg {
+    background-color: #73d4c5;
+}
+
+.grey-bg {
+    background-color: #c1c1c1;
+}
+
+.current-integral-box {
+    background-position: 0px -271px;
+}
+
+.freezing-points-box {
+    background-position: 0px -555px;
+}
+
+.historical-accumulative-integral-box {
+    background-position: 0px -321px;
+}
+
+.cumulative-scores-box {
+    background-position: 0px -371px;
+}
+
+.cumulative-score-failure-box {
+    background-position: 0px -421px;
+}
+
+.expiring-integral-box {
+    background-position: 0px -467px;
+}
+
+.nike-name-box {
+    padding: 10px;
+    font-size: 14px;
+    color: #3D3D3D;
+}
+
+/************** 积分详情 end  *************/
+
+/************** 商品选择器  *************/
+.property-selector-box {
+    padding: 5px;
+    position: relative;
+    height: 370px;
+}
+
+.property-selector-box .top-box {
+    width: 100%;
+    border: solid 1px #e1e1e1;
+    padding: 10px;
+    font-size: 12px;
+    color: #3a3a3a;
+    background: #f2f2f2;
+}
+
+.property-selector-box .left-box {
+    position: absolute;
+    bottom: 0px;
+    top: 60px;
+    width: 190px;
+    overflow-y: auto;
+}
+
+.property-selector-box .right-box {
+    position: absolute;
+    bottom: 0px;
+    top: 60px;
+    left: 210px;
+    right: 0;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.property-selector-box .right-box > div > label input[type='radio'] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.property-container-box {
+    border: solid 1px #dedede;
+    padding: 0;
+    width: 95%;
+    margin: 10px auto;
+}
+
+.property-container-box .top-box {
+    height: 34px;
+    line-height: 32px;
+    position: relative;
+    border-left: 5px solid #54c1e9;
+}
+
+.property-container-box .top-box .right-box {
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 32px;
+    height: 32px;
+    background: none repeat scroll 0 0 #EDEDED;
+}
+
+.property-container-box .top-box .right-box > .modal-title {
+    margin-top: -2px;
+    font-size: 12px;
+    color: #3d3d3d;
+}
+
+.property-container-box .top-box .right-box > .close {
+    margin-top: -8px;
+}
+
+.property-container-box .main-box {
+    background: #fcfcfc;
+    padding: 10px 15px;
+}
+
+.property-container-box .main-box .modules-box .members-table td {
+    width: 110px;
+}
+
+.property-container-box .main-box .modules-box > label {
+    margin-right: 20px;;
+}
+
+.property-container-box .main-box .modules-box label input[type='radio'],
+.property-container-box .main-box .modules-box label input[type='checkbox'] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.property-container-box .main-box .modules-box > p {
+    line-height: 200%;
+}
+
+.property-container-box .main-box .modules-box > div {
+    position: relative;
+}
+
+.property-container-box .main-box .modules-box .pieces-box {
+    border: solid 1px #dff0ff;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #eff7ff;
+    box-shadow: none;
+    line-height: 180%;
+
+}
+
+.property-container-box .main-box .modules-box .pieces-box > span {
+    color: #0083ba;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.property-selector-box .left-box > div > a.active {
+    background-color: #90b9d2;
+    color: #ffffff;
+}
+
+.property-selector-box .left-box > div > a.active > span.tree-open {
+    background-position: 8px -76px;
+}
+
+.property-selector-box .left-box > div > a.active > span.tree-close {
+    background-position: 8px -95px;
+}
+
+.property-selector-box .left-box > div > a.active > span.tree-folders {
+    background-position: 1px -37px;
+}
+
+.property-selector-box .border-box {
+    position: absolute;
+    bottom: 10px;
+    top: 60px;
+    left: 200px;
+    width: 9px;
+    line-height: 280px;
+    text-align: center;
+    background: #f3f3f3;
+    border: solid 1px #ebebeb;
+    color: #b7b7b7;
+}
+
+.tree-open, .tree-close, .tree-folders, .tree-dot {
+    line-height: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0 none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-image: url(../images/tree_cmcc.png);
+}
+
+.tree-open {
+    background-position: 8px 3px;
+}
+
+.tree-close {
+    background-position: 8px -58px;
+}
+
+.tree-folders {
+    background-position: 0px -17px;
+
+}
+
+.tree-dot {
+    background-position: 6px -119px;
+}
+
+.tree-title {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    color: #3a3a3a;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.tree-title:hover {
+    background: #f3f3f3;
+    outline: none;
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+.sub-tree-ul {
+
+}
+
+.sub-tree-ul > li > a {
+    height: 25px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 30px;
+    line-height: 25px;
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+.sub-tree-ul > li > a.active {
+    background-color: #90b9d2;
+    color: #ffffff;
+}
+
+.sub-tree-ul > li > a:focus {
+    background-color: #90b9d2 !important;
+    color: #ffffff !important;
+}
+
+.sub-tree-ul > li > a.active > span.tree-dot {
+    background-position: 6px -107px;
+}
+
+.sub-tree-ul > li > a:hover {
+    background: #f3f3f3;
+    outline: none;
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+.sub-tree-ul > li > a:hover > span.tree-dot {
+    background-position: 6px -119px;
+}
+
+/************** 商品选择器 end *************/
+
+/************** 积分变更记录  *************/
+.detailRank {
+    background-image: url(../images/packagePt.png);
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: -30px -1px;
+    cursor: pointer;
+}
+
+.main-row-one .init-config-box {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.main-row-one .searches-box {
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #efefef;
+    width: 100%;
+    padding: 10px;
+    display: -webkit-box;
+    display:inline-flex;
+}
+
+.main-row-one .searches-box .searches-table {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main-row-one .down-box {
+    padding:0 4px;
+    margin-top: 15px;
+    /*margin-bottom: 10px;*/
+    text-align: right;
+    display: table;
+    width: 100%;
+    font-size: 12px;
+}
+
+.main-row-one .down-box .btn-box {
+    cursor: pointer;
+}
+
+.main-row-one .down-box > div {
+    display: table-cell;
+    width: 50%;
+}
+
+.main-row-one .down-box > div:first-child {
+    text-align: left;
+    padding-left: 8px;
+}
+
+.main-row-one .down-box > div:first-child > input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+.main-row-one .down-box > div:first-child > button {
+    padding: 5px;
+}
+
+.main-row-one .searches-box .searches-table tbody tr td {
+    padding: 5px;
+}
+
+.main-row-one .searches-box .searches-table tbody tr th {
+    text-align: right;
+    font-weight: normal;
+}
+
+.main-row-one .record-box {
+    color: #666666;
+    line-height: 200%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.main-row-one .searches-box label {
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.main-row-one .searches-box .searches-bar-li {
+    float: left;
+    padding: 5px 0;
+    margin-right: 20px;
+}
+
+.main-row-one .searches-box .searches-bar-li .short {
+    margin-left: 3px;
+}
+
+.main-row-one .searches-box .form-inline {
+    float: left;
+}
+
+.main-row-one .searches-box .sub-bar {
+    padding-left: 85px;
+    margin-top: 10px;
+}
+
+.main-row-one .searches-box .sub-bar li {
+    float: left;
+}
+
+.main-row-one .blue {
+    color: #0083ba;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.mgr-box {
+    padding-right: 4px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.back-box {
+    position: relative;
+    top: -8px;
+    left: -25px;
+    font-size: 12px;
+}
+
+/************** 积分变更记录 end  *************/
+/***********************积分兑换店铺优惠券样式***********************/
+.page-coupon .coupon-desc {
+    background: #fdffd6;
+    border: 1px solid #ffe0cd;
+    padding: 10px;
+    width: 100%;
+    line-height: 150%;
+    font-size: 12px;
+}
+
+.page-coupon .coupon-desc .title {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.page-coupon .coupon-desc .content {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.page-coupon .coupon-sets {
+    margin: 20px auto;
+    width: 100%;
+    display: table;
+}
+
+.page-coupon .coupon-sets .top {
+    line-height: 180%;
+    padding: 5px 20px 5px 0;
+    font-size: 12px;
+}
+
+.page-coupon .coupon-sets .sets-list {
+    padding-bottom: 10px;
+    width: 1045px;
+    margin-top: 15px;
+}
+
+.page-coupon .coupon-sets .sets-list li {
+    display: table-cell;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div {
+    border: 1px solid #ececec;
+    margin-right: 15px;
+    position: relative;
+    height: 140px;
+    width: 322px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.set-div .show-div {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+}
+
+.coupon-table {
+    min-width: 500px;
+}
+
+/*修复tooltip出现时的晃动问题*/
+.coupon-table td {
+    border: solid 1px transparent;
+}
+
+.shop-tae-box {
+    border: solid 1px #ececec;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div.add {
+    text-align: center;
+    color: #939393;
+    cursor: pointer;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .font-div {
+    position: absolute;
+    font-size: 110px;
+    opacity: 0.07;
+    top: 10px;
+    line-height: 135px;
+    color: #19a3d6
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .info-div {
+    position: relative;
+    top: 2px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .price-div {
+    width: 125px;
+    float: left;
+    color: #7ac0c6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .price-div span {
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .price-div b {
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .content-div p {
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .content-div {
+    position: relative;
+    float: left;
+    height: 60px;
+    width: 175px;
+    padding-left: 10px;
+    border-left: 1px dashed #54c1e9;
+    color: #757575;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .content-div p.couponSty, .content-div p.couponSty span {
+    font-size: 18px;
+    color: #939393;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .content-div p.images-div {
+    height: 10px;
+    width: 100%;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .button-div {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-coupon .coupon-sets .sets-list li .count-div {
+    width: 321px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .button-div button {
+    background-color: #7ac0c6;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.button-div button span {
+    font-size: 16px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div .edit-div {
+    position: absolute;
+    top: -8px;
+    width: 20px;
+    line-height: 25px;
+    margin-left: 285px;
+    z-index: 1;
+    display: none;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div:hover .edit-div {
+    display: block;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div.add div {
+    width: 100%;
+    height: 65px;
+    display: inline-block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 60px;
+    color: #54c1e9;
+    padding-top: 15px;
+}
+
+.page-coupon .coupon-sets .sets-list li .set-div.add span {
+    font-size: 12px;
+    color: #000000;
+}
+
+.page-coupon .coupon-edit b, .page-coupon .coupon-edits b {
+    color: #f00
+}
+
+.page-coupon .coupon-edit table, .page-coupon .coupon-edits table {
+    table-layout: fixed
+}
+
+.page-coupon .coupon-edit table tbody tr td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.page-coupon .coupon-edit table tbody tr td select[name='goodsList'],
+.page-coupon .coupon-edit table tbody tr td select[name='umpsList'] {
+    width: 100%;
+}
+
+.page-coupon .coupon-edit table tbody tr td input.itemPicUrl-hide {
+    width: 100%;
+    height: 0px;
+    display: flex;
+}
+
+.modal-body-footer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.page-coupon .coupon-edit table tbody tr td .goodsLogo-box {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    overflow: hidden;
+}
+
+.page-coupon .coupon-edit table tbody tr td .goodsLogo-box input.goodsLogo-box-radio {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+}
+
+/***********************积分兑换店铺优惠券样式end***********************/
+
+/*会员专区模块*/
+.member-view .files {
+    position: relative;
+    vertical-align: bottom;
+    line-height: 18px;
+}
+
+.member-view .files label {
+    vertical-align: bottom;
+    padding-bottom: 0
+}
+
+.member-view .files .files-css {
+    padding: 3px 10px;
+    border: 1px solid #e3e3e3;
+    background: #f9f9f9;
+    background: linear-gradient(top, #fff, #f9f9f9), -moz-linear-gradient(top, #fff, #f9f9f9);
+    color: #0083ba;
+    font-size: 12px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.member-view .files .files-css b {
+    font-weight: 800;
+    margin-right: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.member-view .files input[type=file] {
+    position: absolute;
+    opacity: 0;
+    left: 137px;
+    display: block;
+    width: 110px;
+    height: 24px;
+    top: 7px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.member-view .files .files-tips {
+    font-size: 12px;
+    margin-left: 15px;
+    vertical-align: bottom;
+}
+
+.member-view .files .blue {
+    vertical-align: -5px;
+    margin-right: 20px;
+}
+
+/*颜色配置*/
+.member-view .color a {
+    padding: 5px 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 9px;
+    border: 1px solid transparent;
+}
+
+.member-view .color a.active {
+    border: 1px solid #ddd;
+}
+
+.member-view .color a span {
+    padding: 4px 6px;
+}
+
+.css_01 .colorL {
+    background: rgba(122, 192, 198, 1);
+}
+
+.css_01 .colorR {
+    background: rgba(122, 192, 198, 0.5);
+}
+
+.css_02 .colorL {
+    background: rgba(122, 136, 198, 1);
+}
+
+.css_02 .colorR {
+    background: rgba(122, 136, 198, 0.5);
+}
+
+.css_03 .colorL {
+    background: rgba(178, 198, 122, 1);
+}
+
+.css_03 .colorR {
+    background: rgba(178, 198, 122, 0.5);
+}
+
+.css_04 .colorL {
+    background: rgba(198, 122, 141, 1);
+}
+
+.css_04 .colorR {
+    background: rgba(198, 122, 141, 0.5);
+}
+
+.css_05 .colorL {
+    background: rgba(155, 198, 122, 1);
+}
+
+.css_05 .colorR {
+    background: rgba(155, 198, 122, 0.5);
+}
+
+.member-view .modelList span {
+    margin-right: 15px;
+}
+
+.member-view .modelList input[type=radio] {
+    vertical-align: -2px
+}
+
+.modelList b {
+    font-weight: 400
+}
+
+.searches-box.member-view .sub-bar {
+    margin-top: 5px;
+    padding-left: 137px;
+}
+
+.preview-box {
+    width: 990px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.preview-box-header {
+    background: #f9f9f9;
+    border-top: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    width: 990px;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+}
+
+.preview-box-header span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+/*会员专区设置模块帮助文档信息*/
+.addModel {
+    position: relative;
+    top: -6px;
+}
+
+.addModelDesc {
+    background: #fdffd6;
+    border: 1px solid #ffe0cd;
+    padding: 2px 7px;
+    margin-top: 4px;
+    cursor: pointer;
+    line-height: 24px;
+}
+
+.addModelHelps {
+    position: absolute;
+    min-width: 432px;
+    min-height: 300px;
+    top: 38px;
+    left: 0;
+    z-index: 100
+}
+
+.addModelHelps .close {
+    position: relative;
+    background: url(../images/all.png) no-repeat -485px -25px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.addModelHelps .arrow {
+    position: relative;
+    left: 15px;
+    top: -8px;
+    z-index: 99;
+}
+
+.addModelHelps .arrow em {
+    border-color: transparent transparent #d8d8d8 transparent;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+.addModelHelps .arrow b {
+    border-color: transparent transparent #f7f7f7 transparent;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    display: block;
+    height: 0;
+    left: -8px;
+    position: absolute;
+    top: 1px;
+    width: 0;
+}
+
+.addModelHelps .box {
+    background: #f7f7f7;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 0 15px #d8d8d8;
+    color: #626262;
+    line-height: 18px;
+    padding: 20px 15px 15px;
+}
+
+.addModelHelps ul {
+    margin-top: 8px;
+}
+
+.addModelHelps ul li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.addModelHelps ul li a {
+    color: #636363;
+}
+
+.addModelHelps ul li:hover {
+    background: #f2f2f2;
+    color: #0083ba;
+    cursor: pointer;
+}
+
+.dpModel {
+    padding: 0 10px 5px;
+    display: none;
+}
+
+.addModelHelps h2 {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.addModelHelps a {
+    cursor: pointer;
+}
+
+.addModelHelps .text {
+    width: 300px;
+    float: left;
+    white-space: normal;
+    word-break: break-all;
+    line-height: 20px;
+}
+
+.addModelHelps .img1 {
+    width: 100px;
+    float: right;
+    text-align: center
+}
+
+.addModelHelps .img2 {
+    width: 270px;
+    float: right;
+    text-align: center
+}
+
+.addModelHelps .img3 {
+    width: 160px;
+    float: right;
+    text-align: center
+}
+
+.addModelHelps .into {
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.addModelHelps .right {
+    margin-top: 10px;
+    text-align: right
+}
+
+/**************-- 等级变更日志 --*****************/
+.member-regular,
+.member-senior,
+.member-vip,
+.member-supreme {
+    display: inline-block;
+    height: 16px;
+    width: 50px;
+    background: url(../images/stores-images.png) no-repeat -85px -77px;
+}
+
+.member-senior {
+    background-position: -85px -92px;
+}
+
+.member-vip {
+    background-position: -85px -107px;
+}
+
+.member-supreme {
+    background-position: -85px -122px;
+}
+
+.color-red-up {
+    color: #ff0000;
+    font-size: 11.98px;
+}
+
+.color-green-down {
+    color: #409d00;
+    font-size: 11.98px;
+}
+
+/**************-- 等级变更日志 end --*****************/
+
+/**************-- 手动等级变更 --*****************/
+.level-main-box {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #EFEFEF;
+    width: 100%;
+    max-width: 900px;
+    display: table;
+}
+
+.level-main-box .level-table-box {
+    display: table-cell;
+    float: left;
+    margin-left: 10px;
+}
+
+.level-main-box .level-prompt-box {
+    display: table-cell;
+    float: left;
+    margin: 20px auto 20px 5px;
+    padding-left: 10px;
+
+}
+
+.level-submit-box {
+    padding-top: 20px;
+    padding-left: 132px;
+}
+
+.level-submit-box .button-cancel {
+    padding: 0px;
+}
+
+.level-main-box .level-table {
+    width: 465px;
+    margin: 15px auto;
+    color: #3a3a3a;
+    font-size: 12px;
+}
+
+.manual-grade-changes-form .fail-grade-box {
+    width: 465px;
+    margin-top: 20px;
+    color: #3a3a3a;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.level-main-box .level-table-box .level-table tbody td:first-child {
+    width: 110px;
+    text-align: right;
+    padding-left: 0;
+}
+
+.level-main-box .level-table-box .level-table tbody td {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.level-main-box .level-table-box .level-table tbody td .nike-textarea,
+.manual-grade-changes-form .fail-textarea {
+    width: 332px;
+    height: 115px;
+    resize: none;
+    padding: 6px;
+}
+
+.level-main-box .level-prompt-box .level-prompt {
+    background: #ecf8fc;
+    border: 1px solid #d8d8d8;
+    width: 350px;
+    height: 230px;
+    color: #8e8d8d;
+    font-size: 12px;
+    padding: 0 15px 15px 15px;
+    line-height: 180%;
+}
+
+.level-main-box .level-prompt-box .level-prompt .prompt-title {
+    font-size: 12px;
+    color: #0083ba;
+    margin-bottom: 5px;
+}
+
+.level-main-box .level-prompt-box .level-prompt .prompt-textarea {
+    resize: none;
+    width: 280px;
+    height: 110px;
+    color: #4d4d4d;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+/**************-- 手动等级变更 end --*****************/
+/**************-- 屏蔽升降级名单 --*****************/
+
+.screens-box .input-search-box {
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+
+.screens-box .input-search-box .input-search {
+    padding-right: 27px;
+    height: 25px;
+    width: 200px;
+    font-weight: 100;
+    color: #3D3D3D;
+}
+
+.screens-box .input-search-box .search-btn {
+    display: inline-block;
+    background: url(../images/packagePt.png) no-repeat 4px -247px;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.screens-add-box {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #EFEFEF;
+    width: 100%;
+    font-size: 12px;
+    color: #3D3D3D;
+}
+
+.screens-add-box .screens-add-table {
+    margin: 15px;
+}
+
+.screens-add-box .screens-add-table tbody tr td {
+    padding-top: 5px;
+}
+
+.screens-add-box .screens-add-table tbody tr td:first-child {
+    text-align: right;
+}
+
+.list-delete {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../images/all.png) no-repeat 6px -21px;
+    border: 1px solid #D9D9D9;
+    position: relative;
+    top: 3px;
+    left: 1px;
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+
+.screens-import-tip-box {
+    border: solid 1px #d6effe;
+    background: #ecf8fc;
+    padding: 0px 10px;
+    font-size: 12px;
+    color: #8e8d8d;
+    line-height: 26px;
+    overflow: hidden;
+}
+
+.screens-import-tip-box .screens-import-tip {
+    position: relative;
+    top: -1px;
+}
+
+.screens-import-tip-box .file-type {
+    color: #3a3a3a;
+}
+
+.screens-import-tip-box .button-transparent-underline {
+    padding: 0px 5px;
+
+}
+
+.screens-import-table {
+    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 25px;
+}
+
+.screens-import-table tbody tr > td:first-child {
+    text-align: right;
+    font-weight: normal;
+    color: #3D3D3D;
+}
+
+.screens-import-table tbody tr > td:last-child {
+    padding-left: 15px;
+
+}
+
+.screens-import-table .import-box {
+    position: relative;
+    top: -2px;
+}
+
+.screens-import-table .plats-box {
+    padding-bottom: 5px;
+}
+
+.screens-import-table .correct-text {
+    position: relative;
+    top: -7px;
+}
+
+.import-input {
+    color: #bbbbbb;
+}
+
+/*矫正上传按钮*/
+.correct-import {
+    position: relative;
+    top: 2px;
+}
+
+.screens-import-table .import-result-box {
+    line-height: 200%;
+}
+
+/**************-- 屏蔽升降级名单 --*****************/
+
+/**************-- 等级类型设置 --*****************/
+.grade-type-box {
+    width: 100%;
+    /*padding-left: 50px;*/
+}
+
+.grade-select-box {
+    padding-bottom: 10px;
+    height: 40px;
+}
+
+.grade-select-box .grade-select {
+    float: left;
+    width: 100px;
+    height: 30px;
+    background-color: #f0f0f0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+.grade-select-box .grade-select:first-child {
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.grade-select-box .grade-select:nth-child(2) {
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.grade-select-box .active {
+    background-color: #0083ba;
+    color: #ffffff;
+}
+
+.grade-select-box .grade-selected {
+    height: 30px;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    color: #3d3d3d;
+    border: solid 1px #cccccc;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.grade-type-box .grade-type {
+    height: 120px;
+    width: 665px;
+    background: #f9f9f9;
+    border: solid 1px #eeeeee;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.grade-type-box .grade-type > div {
+    position: absolute;
+}
+
+.grade-type-box .grade-type .grade-index {
+    border-right: solid 1px #8ccaff;
+    width: 70px;
+    height: 52px;
+    left: 0;
+    top: 20px;
+    font-family: arial, sans-serif;
+    font-size: 36px;
+    color: #cccccc;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.grade-type .grade-index > span {
+    font-size: 36px;
+}
+
+.grade-type-box .grade-type .grade-content {
+    top: 20px;
+    left: 70px;
+    padding-left: 30px;
+
+}
+
+.grade-type-box .grade-type .grade-content .grade-key {
+    display: inline-block;
+    color: #3d3d3d;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.grade-type-box .grade-type .grade-content .grade-value {
+    display: inline-block;
+    padding-left: 20px;
+    color: #3d3d3d;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.grade-type-box .grade-type .grade-content .grade-value input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.grade-type-box .grade-type .grade-right {
+    right: 14px;
+    top: 14px;
+    height: 20px;
+    width: 70px;
+    display: none;
+    text-align: right;
+}
+
+.grade-type-box .grade-type:hover .grade-right {
+    display: block;
+}
+
+.grade-type-box .btn-add-box .button-add-custom {
+    color: #0083ba;
+    font-size: 12px;
+}
+
+.grade-type-box .btn-save-box {
+    padding-top: 40px;
+}
+
+.grade-type-box .btn-save-box .button {
+    width: 100px;
+    height: 30px;
+}
+
+.grade-type-box .btn-save-box .button-cancel {
+    font-size: 12px;
+}
+
+.grade-type-box .disabled-label {
+    opacity: 0.6;
+}
+
+.page-desc {
+    background: #fdffd6;
+    border: 1px solid #ffe0cd;
+    padding: 10px;
+    width: 100%;
+    line-height: 150%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.w990 {
+    width: 990px;
+}
+
+.page-desc .close-btn {
+    font-weight: bolder;
+    padding: 0;
+}
+
+/**************-- 等级类型设置 end --*****************/
+
+/* fix bootstrap*/
+.btn-sm, .btn-group-sm > .btn {
+    padding: 2px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+}
+
+select {
+    font-size: 12px;
+}
+
+.grade-rule-switch {
+    line-height: 24px;
+    vertical-align: top;
+    height: 36px;
+    margin-top: 12px;
+}
+
+.grade-rule-switch input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.grade-rule-switch span,
+.grade-rule-switch label {
+    margin-right: 25px;
+    vertical-align: top
+}
+
+.grad-rule-content .searches-bar {
+    margin: 0 0 0 40px;
+    font-size: 12px;
+}
+
+.grad-rule-content .margin-left20 {
+    margin-left: 20px;
+}
+
+.grad-rule-content .add-wrap {
+    text-align: left;
+}
+
+.grad-rule-content .grader-rule-set,
+.grad-rule-content .grader-rule-date {
+    font-size: 12px;
+}
+
+.grad-rule-content .grader-rule-set .add-rulers {
+    top: 5px;
+}
+
+.grad-rule-content .searches-box label {
+    padding: 0;
+    margin: inherit;
+
+}
+
+.grade-rule-choose-tips {
+    line-height: 20px;
+    margin-top: 28px;
+    margin-left: 5px;
+}
+
+.searches-bar-nowrap {
+    line-height: 30px;
+}
+
+.searches-bar-nowrap span {
+    margin-right: 25px;
+    vertical-align: top
+}
+
+.grade-rule-up input {
+    margin-right: 5px;
+}
+
+.grade-rule-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grade-rule-table .title {
+    width: 100%;
+    background: #f0f0f0;
+    color: #3a3a3a;
+    height: 32px;
+}
+
+.grade-rule-table .title th {
+    text-align: center
+}
+
+.grade-rule-table .body td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.grade-rule-table .grader-rule-type div {
+    margin-top: 5px;
+}
+
+.grade-rule-table .body .grader-rule-type i {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    background: url(../images/vip.png) no-repeat;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.grade-rule-table .body .grader-rule-set ul {
+    background: #f7f7f7;
+    padding: 0 10px 10px 10px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li {
+    line-height: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.top {
+    padding-right: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: auto;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.top dt {
+    text-align: left;
+    float: left;
+    padding-left: 4px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.top dd {
+    width: 105px;
+    float: right;
+    vertical-align: top;
+    margin-right: -100px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.top dd a {
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom {
+    padding-left: 115px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+    background: #fff;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom dt {
+    text-align: left;
+    float: left;
+    margin-left: -100px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom dd {
+    line-height: 28px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom .first {
+    text-indent: 60px;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom dd .condition {
+    margin-right: 28px;
+    color: #7a7a7a
+}
+
+.grade-rule-table .display-block {
+    display: block;
+}
+
+.grade-rule-table .body .grader-rule-set ul li dl.bottom dd .inner-condition {
+    color: #7a7a7a
+}
+
+.grade-rule-table .grader-rule-set dl.bottom p {
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.grade-rule-table .grader-rule-set .mark-triangles-bottom {
+    margin: 0;
+}
+
+.grade-rule-table .body td.grader-rule-date {
+    line-height: 32px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.grade-rule-table .rule-data-box {
+    height: 100px;
+    width: 100%;
+    line-height: 18px;
+}
+
+.grade-rule-table .body .grader-rule-date input {
+    margin-right: 2px;
+}
+
+.grade-rule-table .rule-data-box input[type='radio'] {
+    margin-right: 5px;
+}
+
+.grade-rule-table .body .grader-rule-date span {
+    margin-right: 25px;
+    vertical-align: top
+}
+
+.grade-rule-table .body .grader-rule-date .first {
+    margin-right: 28px;
+}
+
+.grade-rule-dialog .property-selector-box {
+    padding: 0;
+}
+
+.grade-rule-dialog .modal-body-footer {
+    margin-top: 10px;
+}
+
+.grade-rule-dialog .property-selector-box .border-box {
+    bottom: 0
+}
+
+.grade-rule-dialog .property-container-box {
+    width: 100%
+}
+
+.grade-rule-dialog .property-selector-box .right-box > div > label input[type='radio'] {
+    vertical-align: -2px;
+}
+
+.tree-title:hover, .tree-title:focus, .tree-title span:hover {
+    text-decoration: none
+}
+
+.property-container-box .main-box .format-box select {
+    font-size: 12px
+}
+
+.property-container-box .main-box .format-box input[type='radio'] {
+    vertical-align: -2px;
+    margin-right: 3px;
+}
+
+.property-container-box .main-box .format-box {
+    padding-left: 80px;
+    line-height: 28px;
+    margin-bottom: 1px;
+}
+
+.property-container-box .main-box .format-box p {
+    margin-bottom: 7px;
+}
+
+.property-container-box .main-box .format-box dt {
+    margin-left: -80px;
+    float: left;
+    padding-top: 1px;
+}
+
+.h27 {
+    height: 26px;
+}
+
+/****/
+.middle-box {
+    background: url(../images/ccms_popContent.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-family: "微软雅黑";
+    min-height: 190px;
+    padding: 0 45px 15px 145px;
+}
+
+.middle-content {
+    padding-top: 30px;
+}
+
+/*--------重写时间组建样式------------*/
+.datepicker.dropdown-menu tbody button {
+    padding: 0px;
+}
+
+/*---------等级规则设置--------------*/
+.btn-save-box {
+    padding-bottom: 20px;
+}
+
+.btn-save-box .button-cancel {
+    padding: 0px;
+}
+
+.btn-save-box .desc-box {
+    margin-top: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.error-box {
+    line-height: 150%;
+    color: red;
+}
+
+/*****   收集信息    ******/
+.rules-box {
+    margin-top: 16px;
+    border: 1px solid #efefef;
+    background-color: #f9f9f9;
+    box-shadow: 1px 0 5px 1px #efefef;
+    padding: 20px 26px 35px 26px;
+    font-size: 12px;
+}
+
+.rules-box > label {
+    margin-right: 50px;
+}
+
+/*********  界面设置****************/
+.member-view {
+    padding: 20px;
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #efefef;
+    width: 990px;
+}
+
+.member-view .member-table {
+    color: #3a3a3a;
+    font-size: 12px;
+}
+
+.w216 {
+    width: 216px;
+}
+
+.w178 {
+    width: 178px;
+}
+
+.member-view .member-table tr td {
+    padding-bottom: 15px;
+}
+
+.member-view .member-table tr td:first-child {
+    width: 110px;
+    text-align: right;
+}
+
+.member-view .module-layout-box {
+    width: 600px;
+}
+
+.member-view .module-layout-box > select {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.member-view select[name='homePage'] {
+    height: 24px;
+}
+
+.uploading-icon {
+    background: url(../images/stores-images.png) no-repeat -2px -171px;
+    width: 20px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 197px;
+    top: 1px;
+}
+
+.points-desc,
+.points-desc:hover {
+    color: #3a3a3a;
+}
+
+.coupon-edit-table tr td {
+    border: solid 1px transparent;
+}
+
+label {
+    cursor: pointer;
+}
