@@ -18,7 +18,7 @@ module.exports = {
   },
   output : {
     path             : path.join(__dirname, 'build'),
-    publicPath       : '/kuitos.github.io/build/',
+    publicPath       : 'build/',
     filename         : '[name]-[hash:8].js'
   },
   plugins: [
