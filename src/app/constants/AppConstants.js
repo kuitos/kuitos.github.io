@@ -8,13 +8,9 @@ import keyMirror from 'keyMirror';
 /**
  * app实体配置
  */
-export default {
+export default keyMirror({
 
-  ActionTypes: keyMirror({
+	RECEIVE_POSTS: null,
+	START_LOADING: null
 
-    RECEIVE_POSTS        : null,
-    CHANGE_LOADING_STATUS: null
-
-  })
-
-};
+});

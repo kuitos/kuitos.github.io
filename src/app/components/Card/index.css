@@ -1,0 +1,20 @@
+.card {
+
+	background-color: #54abee;
+	min-height: 120px;
+	min-width: 250px;
+	margin: 4px;
+
+}
+
+.card a {
+	text-decoration: none;
+}
+
+@media screen and (min-width: 35em) {
+
+	.card {
+		min-width: 570px;
+		margin: 30px;
+	}
+}

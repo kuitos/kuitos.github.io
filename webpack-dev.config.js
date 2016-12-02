@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'source-map',
   entry  : [
     'webpack-hot-middleware/client?path=/__webpack_hmr&reload=true',
-    './src/app/App.jsx'
+    './src/app/Index.jsx'
   ],
   output : {
     path      : path.join(__dirname, 'build'),

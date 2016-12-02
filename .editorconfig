@@ -1,0 +1,27 @@
+# editorconfig.org
+root = true
+
+[**]
+# Unix-style newlines with a newline ending every file
+end_of_line = lf
+insert_final_newline = true
+
+# 去除行尾空白字符
+trim_trailing_whitespace = true
+
+# 编码格式，编码格式，支持latin1、utf-8、utf-8-bom、utf-16be和utf-16le，不建议使用uft-8-bom。
+charset = utf-8
+
+# 项目中采用tab作为代码缩进样式
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[{package.json,.babelrc,.eslintrc}]
+indent_style = space
+indent_size = 2
+
+[*.yml]
+indent_style = space
+indent_size = 2

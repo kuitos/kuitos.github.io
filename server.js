@@ -5,7 +5,6 @@
  */
 
 var path = require('path');
-var express = require('express');
 var jsonServer = require('json-mock-kuitos');
 var webpack = require('webpack');
 var config = require('./webpack-dev.config');
