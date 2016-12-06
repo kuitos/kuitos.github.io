@@ -28,16 +28,8 @@ export function receivePostList({perPage = 5, page = 1}) {
 		getPosts({perPage, page})
 
 			.then(response => {
-
-				const linkHeader = response.headers.get('Link');
-				const hasMore = linkHeader.split(',').some(link => link.indexOf('rel="next"') !== -1);
-				dispatch(hasMorePosts(hasMore));
-
-				return response.json();
-			})
-
-			.then(posts => {
-				dispatch(receivePosts(posts));
+				dispatch(hasMorePosts(response.hasMore));
+				dispatch(receivePosts(response.payload));
 				dispatch(startLoading(false));
 			});
 	};
