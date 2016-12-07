@@ -5,17 +5,14 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import AppContainer from './containers/App';
-import rootReducer from './reducers';
-import createStore from './store';
+import CardListStore from './store/CardListStore';
+import ViewStore from './store/ViewStore';
 
-const store = createStore(rootReducer);
+const cardListStore = new CardListStore();
+const viewStore = new ViewStore();
 
 ReactDOM.render(
-	<Provider store={store}>
-		<AppContainer />
-	</Provider>,
-
+	<AppContainer bsStore={cardListStore} viewStore={viewStore}/>,
 	document.getElementById('container')
 );

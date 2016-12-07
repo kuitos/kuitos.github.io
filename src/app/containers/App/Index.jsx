@@ -4,25 +4,26 @@ import 'loaders.css/src/animations/pacman.scss';
 import 'loaders.css/src/animations/line-scale-pulse-out.scss';
 import React from 'react';
 import { Loader } from 'react-loaders';
-import { connect } from 'react-redux';
+import { observer } from 'mobx-react';
 import InfiniteScroll from 'react-infinite-scroller';
 import CardList from '../../components/CardList';
-import { receivePostList, startLoading } from '../../actions';
 
-@connect(state => state)
+@observer
 export default class App extends React.Component {
+
+	perPage = 10;
+	page = 1;
 
 	constructor(props) {
 		super(props);
-		const {dispatch} = this.props;
-		this.page = 1;
-		dispatch(startLoading(true));
-		dispatch(receivePostList({perPage: 10, page: this.page}));
+		const {bsStore, viewStore} = this.props;
+		viewStore.changeLoadingStatus(true);
+		bsStore.loadPagePosts(this.perPage, this.page).then(() => viewStore.changeLoadingStatus(false));
 	}
 
 	loadNextPage() {
-		const {dispatch} = this.props;
-		dispatch(receivePostList({perPage: 10, page: ++this.page}));
+		const {bsStore} = this.props;
+		bsStore.loadPagePosts(this.perPage, ++this.page);
 	}
 
 	render() {
@@ -30,7 +31,8 @@ export default class App extends React.Component {
 		const loadingBackground = '#54abee';
 		const contentBackground = '#fff';
 
-		const {posts, loading, hasMore} = this.props;
+		const {posts, hasMore} = this.props.bsStore;
+		const {loading} = this.props.viewStore;
 
 		return (
 
@@ -42,7 +44,7 @@ export default class App extends React.Component {
 
 						<div className="card-list">
 
-							<CardList list={posts} loadNextPage={::this.loadNextPage}/>
+							<CardList list={posts}/>
 
 							<InfiniteScroll
 								loadMore={::this.loadNextPage}

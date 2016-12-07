@@ -4,6 +4,7 @@
  * @since 2015-11-02
  */
 import React from 'react';
+import { PropTypes } from 'mobx-react';
 import PostCard from '../PostCard';
 
 const CardList = ({list}) => (
@@ -26,7 +27,7 @@ const CardList = ({list}) => (
 );
 
 CardList.propTypes = {
-	list: React.PropTypes.array.isRequired
+	list: PropTypes.observableArray.isRequired
 };
 
 export default CardList;
